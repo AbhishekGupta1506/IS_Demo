@@ -1,0 +1,109 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="71Package" runtimeVersion="9.0.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="9.0.0.0" />
+  <buildInfo name="BuildVersion" value="9.0.2" />
+  <buildInfo name="BuildTimestamp" value="2013-03-19T12:37:35" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.71Package" displayName="71Package">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="get71services.getstorekey3" displayName="get71services:getstorekey3">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.getstorekey2" displayName="get71services:getstorekey2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.getstorekey1" displayName="get71services:getstorekey1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.getstorekey12" displayName="get71services:getstorekey12">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.atestclosekeys" displayName="get71services:atestclosekeys">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.astoragekeys" displayName="get71services:astoragekeys">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.gettestdeletekey1" displayName="get71services:gettestdeletekey1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.atestdeletekeys" displayName="get71services:atestdeletekeys">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.getstorekey8" displayName="get71services:getstorekey8">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.getstore1key5" displayName="get71services:getstore1key5">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.getstorekey7" displayName="get71services:getstorekey7">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.getstore1key4" displayName="get71services:getstore1key4">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.getstorekey6" displayName="get71services:getstorekey6">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.getstore1key3" displayName="get71services:getstore1key3">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.astorage1keys" displayName="get71services:astorage1keys">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.gettestclosekey1" displayName="get71services:gettestclosekey1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="get71services.getstorekey4" displayName="get71services:getstorekey4">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="71Package.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="71Package.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="71Package.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="71Package.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="71Package.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="71Package.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="71Package.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="71Package.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="71Package.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="71Package.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="71Package.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
