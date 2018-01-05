@@ -1,0 +1,2044 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="venusACDL" runtimeVersion="9.0.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="9.0.0.0" />
+  <buildInfo name="BuildVersion" value="9.0.2" />
+  <buildInfo name="BuildTimestamp" value="2013-03-19T12:37:38" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.venusACDL" displayName="venusACDL">
+    <implementation.generic type="ispackage" />
+    <dependsOn>IS:ISPackage.venusUtilities</dependsOn>
+    <dependsOn>IS:ISPackage.DeployerTests</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.util.http.wsHttp_WithChunkSmallFile" displayName="deployMobileGateway.util.mtom_wsd.util.http:wsHttp_WithChunkSmallFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.util.setMtomStreaming</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.connectors.p01_mtom_http_PortType_mtom_xop_test_service</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.util.http.wsHttp_WithoutChunkSmallFile" displayName="deployMobileGateway.util.mtom_wsd.util.http:wsHttp_WithoutChunkSmallFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.util.setMtomStreaming</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.connectors.p01_mtom_http_PortType_mtom_xop_test_service</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.util.http.wsHttp_WithChunkBigFile" displayName="deployMobileGateway.util.mtom_wsd.util.http:wsHttp_WithChunkBigFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.util.setMtomStreaming</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.connectors.p01_mtom_http_PortType_mtom_xop_test_service</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.util.http.wsHttp_WithoutChunkBigFile" displayName="deployMobileGateway.util.mtom_wsd.util.http:wsHttp_WithoutChunkBigFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.util.setMtomStreaming</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.connectors.p01_mtom_http_PortType_mtom_xop_test_service</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.util.https.wsHttps_WithoutChunkSmallFile" displayName="deployMobileGateway.util.mtom_wsd.util.https:wsHttps_WithoutChunkSmallFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.util.setMtomStreaming</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.connectors.p02_mtom_https_PortType_mtom_xop_test_service</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.util.https.wsHttps_WithChunkBigFile" displayName="deployMobileGateway.util.mtom_wsd.util.https:wsHttps_WithChunkBigFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.util.setMtomStreaming</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.connectors.p02_mtom_https_PortType_mtom_xop_test_service</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.util.https.wsHttps_WithChunkSmallFile" displayName="deployMobileGateway.util.mtom_wsd.util.https:wsHttps_WithChunkSmallFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.util.setMtomStreaming</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.connectors.p02_mtom_https_PortType_mtom_xop_test_service</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.util.https.wsHttps_WithoutChunkBigFile" displayName="deployMobileGateway.util.mtom_wsd.util.https:wsHttps_WithoutChunkBigFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.util.setMtomStreaming</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.connectors.p02_mtom_https_PortType_mtom_xop_test_service</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.util.setMtomStreaming" displayName="deployMobileGateway.util.mtom_wsd.util:setMtomStreaming">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.util.a_test01_1" displayName="deployMobileGateway.util.mtom_wsd.util:a_test01_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.getFileAsBase64String</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.svc.encodeBase64</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.connectors.p01_mtom_http_PortType_mtom_xop_test_service</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareFileSize</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.svc.decodeBase64</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.cleanUp</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.util.a_test01" displayName="deployMobileGateway.util.mtom_wsd.util:a_test01">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.getFileAsBase64String</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.connectors.p01_mtom_http_PortType_mtom_xop_test_service</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.connectors.p01_mtom_http_PortType_mtom_xop_test_service" displayName="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.connectors:p01_mtom_http_PortType_mtom_xop_test_service">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes.p01_mtom_http_PortType_mtom_xop_test_service_Input</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes.p01_mtom_http_PortType_mtom_xop_test_service_Output</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes.schema_c01_mtom_http" displayName="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes:schema_c01_mtom_http">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes.p01_mtom_http_PortType_mtom_xop_test_service_Output" displayName="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes:p01_mtom_http_PortType_mtom_xop_test_service_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes.docTypeRef_tns_mtom_xop_test_serviceResponse</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes.p01_mtom_http_PortType_mtom_xop_test_service_Input" displayName="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes:p01_mtom_http_PortType_mtom_xop_test_service_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes.docTypeRef_tns_mtom_xop_test_service</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes.docTypeRef_tns_mtom_xop_test_serviceResponse" displayName="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes:docTypeRef_tns_mtom_xop_test_serviceResponse">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes.docTypeRef_tns_mtom_xop_test_service" displayName="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes:docTypeRef_tns_mtom_xop_test_service">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes.docTypeRef_tns_mtom_xop_test_serviceResponse" displayName="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes:docTypeRef_tns_mtom_xop_test_serviceResponse">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes.p02_mtom_https_PortType_mtom_xop_test_service_Output" displayName="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes:p02_mtom_https_PortType_mtom_xop_test_service_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes.docTypeRef_tns_mtom_xop_test_serviceResponse</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes.docTypeRef_tns_mtom_xop_test_service" displayName="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes:docTypeRef_tns_mtom_xop_test_service">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes.schema_c02_mtom_https" displayName="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes:schema_c02_mtom_https">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes.p02_mtom_https_PortType_mtom_xop_test_service_Input" displayName="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes:p02_mtom_https_PortType_mtom_xop_test_service_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes.docTypeRef_tns_mtom_xop_test_service</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.connectors.p02_mtom_https_PortType_mtom_xop_test_service" displayName="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.connectors:p02_mtom_https_PortType_mtom_xop_test_service">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes.p02_mtom_https_PortType_mtom_xop_test_service_Input</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes.p02_mtom_https_PortType_mtom_xop_test_service_Output</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https" displayName="deployMobileGateway.util.mtom_wsd.consumer:c02_mtom_https">
+    <implementation.generic type="iswsdconsumer" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes.p02_mtom_https_PortType_mtom_xop_test_service_Input</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.docTypes.p02_mtom_https_PortType_mtom_xop_test_service_Output</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c02_mtom_https_.connectors.p02_mtom_https_PortType_mtom_xop_test_service</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http" displayName="deployMobileGateway.util.mtom_wsd.consumer:c01_mtom_http">
+    <implementation.generic type="iswsdconsumer" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes.p01_mtom_http_PortType_mtom_xop_test_service_Input</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.docTypes.p01_mtom_http_PortType_mtom_xop_test_service_Output</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.consumer.c01_mtom_http_.connectors.p01_mtom_http_PortType_mtom_xop_test_service</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.svc.decodeBase64" displayName="deployMobileGateway.util.mtom_wsd.svc:decodeBase64">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.svc.mtom_xop_test_service" displayName="deployMobileGateway.util.mtom_wsd.svc:mtom_xop_test_service">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.svc.encodeBase64" displayName="deployMobileGateway.util.mtom_wsd.svc:encodeBase64">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.provider.p01_mtom_http" displayName="deployMobileGateway.util.mtom_wsd.provider:p01_mtom_http">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.svc.mtom_xop_test_service</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mtom_wsd.provider.p02_mtom_https" displayName="deployMobileGateway.util.mtom_wsd.provider:p02_mtom_https">
+    <implementation.generic type="iswsdprovider" />
+    <dependsOn>IS:deployMobileGateway.util.mtom_wsd.svc.mtom_xop_test_service</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.restSvc.smallFile._default" displayName="deployMobileGateway.util.restSvc.smallFile:_default">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.restSvc.bigFile._default" displayName="deployMobileGateway.util.restSvc.bigFile:_default">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.restSvc.utilSvc.restSendWithoutChunkBigFile" displayName="deployMobileGateway.util.restSvc.utilSvc:restSendWithoutChunkBigFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.restSvc.utilSvc.restSendWithoutChunkSmallFile" displayName="deployMobileGateway.util.restSvc.utilSvc:restSendWithoutChunkSmallFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.restSvc.utilSvc.rest_httpsSendWithChunkBigFile" displayName="deployMobileGateway.util.restSvc.utilSvc:rest_httpsSendWithChunkBigFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.restSvc.utilSvc.rest_httpsSendWithoutChunkBigFile" displayName="deployMobileGateway.util.restSvc.utilSvc:rest_httpsSendWithoutChunkBigFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.restSvc.utilSvc.restSendWithChunkBigFile" displayName="deployMobileGateway.util.restSvc.utilSvc:restSendWithChunkBigFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.restSvc.utilSvc.restSendWithChunkSmallFile" displayName="deployMobileGateway.util.restSvc.utilSvc:restSendWithChunkSmallFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.httpSvc.httpRecieveBigFile" displayName="deployMobileGateway.util.httpSvc:httpRecieveBigFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.httpSvc.httpSendWithChunkSmallFile" displayName="deployMobileGateway.util.httpSvc:httpSendWithChunkSmallFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.httpSvc.httpSendWithoutChunkBigFile" displayName="deployMobileGateway.util.httpSvc:httpSendWithoutChunkBigFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.httpSvc.httpRecieveSmallFile" displayName="deployMobileGateway.util.httpSvc:httpRecieveSmallFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.httpSvc.httpSendWithChunkBigFile" displayName="deployMobileGateway.util.httpSvc:httpSendWithChunkBigFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.httpSvc.httpSendWithoutChunkSmallFile" displayName="deployMobileGateway.util.httpSvc:httpSendWithoutChunkSmallFile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.alert.alertFlowSvc3" displayName="deployMobileGateway.util.alert:alertFlowSvc3">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.alert.alertFlowSvc2" displayName="deployMobileGateway.util.alert:alertFlowSvc2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.alert.alertFlowSvc1" displayName="deployMobileGateway.util.alert:alertFlowSvc1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.alert.setAlert_copy" displayName="deployMobileGateway.util.alert:setAlert_copy">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.alert.restorePipeline3" displayName="deployMobileGateway.util.alert:restorePipeline3">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.alert.restorePipeline2" displayName="deployMobileGateway.util.alert:restorePipeline2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.alert.restorePipeline1" displayName="deployMobileGateway.util.alert:restorePipeline1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.alert.setAlert_alertFlowSvc3" displayName="deployMobileGateway.util.alert:setAlert_alertFlowSvc3">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.alert.setAlert_alertFlowSvc2" displayName="deployMobileGateway.util.alert:setAlert_alertFlowSvc2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.alert.setAlert_alertFlowSvc1" displayName="deployMobileGateway.util.alert:setAlert_alertFlowSvc1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.alert.setAlert" displayName="deployMobileGateway.util.alert:setAlert">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.security.setServerCerts" displayName="deployMobileGateway.util.security:setServerCerts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.security.del_imported_cert" displayName="deployMobileGateway.util.security:del_imported_cert">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.security.del_ks_ts" displayName="deployMobileGateway.util.security:del_ks_ts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.security.addListener" displayName="deployMobileGateway.util.security:addListener">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.security.del_ports" displayName="deployMobileGateway.util.security:del_ports">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.security.disablePorts" displayName="deployMobileGateway.util.security:disablePorts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.security.createSecAssets" displayName="deployMobileGateway.util.security:createSecAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.security.cleanSecAssets</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.security.createKS_TS</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.security.setServerCerts</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.security.enablePorts</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.security.addListener</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.security.cleanSecAssets" displayName="deployMobileGateway.util.security:cleanSecAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.security.del_ports</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.security.del_imported_cert</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.security.del_ks_ts</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.security.setServerCerts</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.security.createKS_TS" displayName="deployMobileGateway.util.security:createKS_TS">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.security.createRGPorts" displayName="deployMobileGateway.util.security:createRGPorts">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.security.addListener</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.security.enablePorts" displayName="deployMobileGateway.util.security:enablePorts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.rules.dos.cleanGlobalDeniedIPList" displayName="deployMobileGateway.util.rules.dos:cleanGlobalDeniedIPList">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.rules.dos.deleteGlobalDeniedIP</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.rules.dos.cleanBlockedIP" displayName="deployMobileGateway.util.rules.dos:cleanBlockedIP">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.rules.dos.deleteGlobalDeniedIP" displayName="deployMobileGateway.util.rules.dos:deleteGlobalDeniedIP">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.rules.updateRule" displayName="deployMobileGateway.util.rules:updateRule">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.rules.deleteRule" displayName="deployMobileGateway.util.rules:deleteRule">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.rules.createRuleForMobileApp" displayName="deployMobileGateway.util.rules:createRuleForMobileApp">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.rules.getRule" displayName="deployMobileGateway.util.rules:getRule">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.rules.createDOS" displayName="deployMobileGateway.util.rules:createDOS">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.rules.createRule" displayName="deployMobileGateway.util.rules:createRule">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.license.updateLicenseKey" displayName="deployMobileGateway.util.license:updateLicenseKey">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.license.bkp_default_licenseKey" displayName="deployMobileGateway.util.license:bkp_default_licenseKey">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.copyFile</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.license.test_setLicense" displayName="deployMobileGateway.util.license:test_setLicense">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.license.updateLicenseKey</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.license.restore_default_licenseKey" displayName="deployMobileGateway.util.license:restore_default_licenseKey">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.license.updateLicenseKey</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.mobileAppOptions.updateMobileApplications" displayName="deployMobileGateway.util.mobileAppOptions:updateMobileApplications">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.mobileAppOptions.clearPipeline" displayName="deployMobileGateway.util.mobileAppOptions:clearPipeline">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.mobileAppOptions.updateDeviceTypes" displayName="deployMobileGateway.util.mobileAppOptions:updateDeviceTypes">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.wsEndPtAlias.Consumer.cleanWSEndPtAssets" displayName="deployMobileGateway.util.wsEndPtAlias.Consumer:cleanWSEndPtAssets">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.wsEndPtAlias.Consumer.httpsConsumerEndPoint" displayName="deployMobileGateway.util.wsEndPtAlias.Consumer:httpsConsumerEndPoint">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="deployMobileGateway.util.wsEndPtAlias.Consumer.createWSEndPtAssets" displayName="deployMobileGateway.util.wsEndPtAlias.Consumer:createWSEndPtAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.wsEndPtAlias.Consumer.cleanWSEndPtAssets</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.wsEndPtAlias.Consumer.add_Con_http_endPt</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.wsEndPtAlias.Consumer.add_Con_https_endPt</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.wsEndPtAlias.Consumer.httpConsumerEndPoint" displayName="deployMobileGateway.util.wsEndPtAlias.Consumer:httpConsumerEndPoint">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="deployMobileGateway.util.wsEndPtAlias.Consumer.add_Con_https_endPt" displayName="deployMobileGateway.util.wsEndPtAlias.Consumer:add_Con_https_endPt">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.wsEndPtAlias.Consumer.httpsConsumerEndPoint</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.wsEndPtAlias.Consumer.edit_Cons_http_endPt" displayName="deployMobileGateway.util.wsEndPtAlias.Consumer:edit_Cons_http_endPt">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.wsEndPtAlias.Consumer.edit_Cons_https_endpt" displayName="deployMobileGateway.util.wsEndPtAlias.Consumer:edit_Cons_https_endpt">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.wsEndPtAlias.Consumer.add_Con_http_endPt" displayName="deployMobileGateway.util.wsEndPtAlias.Consumer:add_Con_http_endPt">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.wsEndPtAlias.Consumer.httpConsumerEndPoint</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.getFileAsBase64String" displayName="deployMobileGateway.util:getFileAsBase64String">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.deployMobileGateway.util.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.deployMobileGateway.util.class</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.sleep</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.deleteCopyFiles</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.copyFile</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.findString" displayName="deployMobileGateway.util:findString">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.deployMobileGateway.util.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.deployMobileGateway.util.class</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.getFileAsBase64String</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.sleep</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.deleteCopyFiles</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.copyFile</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.saveFile" displayName="deployMobileGateway.util:saveFile">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.deployMobileGateway.util.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.deployMobileGateway.util.class</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.getFileAsBase64String</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.sleep</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.deleteCopyFiles</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.copyFile</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.getpage" displayName="deployMobileGateway.util:getpage">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.sleep" displayName="deployMobileGateway.util:sleep">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.deployMobileGateway.util.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.deployMobileGateway.util.class</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.getFileAsBase64String</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.deleteCopyFiles</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.copyFile</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.shutDownSvc" displayName="deployMobileGateway.util:shutDownSvc">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.wsEndPtAlias.Consumer.cleanWSEndPtAssets</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.security.cleanSecAssets</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.license.restore_default_licenseKey</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.setSettings" displayName="deployMobileGateway.util:setSettings">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="deployMobileGateway.util.compareLocalFileSize" displayName="deployMobileGateway.util:compareLocalFileSize">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.deployMobileGateway.util.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.deployMobileGateway.util.class</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.getFileAsBase64String</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.sleep</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.deleteCopyFiles</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.copyFile</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.startupSvc" displayName="deployMobileGateway.util:startupSvc">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.security.createSecAssets</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.wsEndPtAlias.Consumer.createWSEndPtAssets</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.license.bkp_default_licenseKey</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.deleteCopyFiles" displayName="deployMobileGateway.util:deleteCopyFiles">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.deployMobileGateway.util.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.deployMobileGateway.util.class</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.getFileAsBase64String</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.sleep</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.copyFile</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.cleanUp" displayName="deployMobileGateway.util:cleanUp">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:testMobileGateway.util.rules.deleteRule</dependsOn>
+    <dependsOn>IS:testMobileGateway.util.rules.createDOS</dependsOn>
+    <dependsOn>IS:testMobileGateway.util.alert.setAlert</dependsOn>
+    <dependsOn>IS:testMobileGateway.util.deleteCopyFiles</dependsOn>
+    <dependsOn>IS:testMobileGateway.util.mtom_wsd.util.setMtomStreaming</dependsOn>
+    <dependsOn>IS:testMobileGateway.util.rules.dos.cleanBlockedIP</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mobileAppOptions.updateDeviceTypes</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mobileAppOptions.updateMobileApplications</dependsOn>
+    <dependsOn>IS:testMobileGateway.util.cleanPipeline</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.util.copyFile" displayName="deployMobileGateway.util:copyFile">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.deployMobileGateway.util.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.deployMobileGateway.util.class</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.getFileAsBase64String</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.findString</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.saveFile</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.sleep</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.compareLocalFileSize</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.deleteCopyFiles</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.svc.cleanAllAssets" displayName="deployMobileGateway.svc:cleanAllAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.cleanUp</dependsOn>
+  </asset>
+  <asset name="deployMobileGateway.svc.createAllAssets" displayName="deployMobileGateway.svc:createAllAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:deployMobileGateway.util.rules.createRule</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.alert.setAlert_alertFlowSvc1</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.alert.setAlert_alertFlowSvc2</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.alert.setAlert</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.rules.createDOS</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mobileAppOptions.updateDeviceTypes</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.mobileAppOptions.updateMobileApplications</dependsOn>
+    <dependsOn>IS:deployMobileGateway.util.rules.createRuleForMobileApp</dependsOn>
+  </asset>
+  <asset name="csrfGuard.utils.cleanSettings" displayName="csrfGuard.utils:cleanSettings">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:csrfGuard.utils.changeGuardState</dependsOn>
+  </asset>
+  <asset name="csrfGuard.utils.changeGuardState" displayName="csrfGuard.utils:changeGuardState">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="csrfGuard.utils.getCSRFGuardDetails" displayName="csrfGuard.utils:getCSRFGuardDetails">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="csrfGuard.svc.testCSRF" displayName="csrfGuard.svc:testCSRF">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:csrfGuard.utils.cleanSettings</dependsOn>
+    <dependsOn>IS:csrfGuard.utils.changeGuardState</dependsOn>
+    <dependsOn>IS:csrfGuard.utils.getCSRFGuardDetails</dependsOn>
+  </asset>
+  <asset name="Broker.configureSSL" displayName="Broker:configureSSL">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Settings.Messaging.getBrokerSettings</dependsOn>
+    <dependsOn>IS:BrokerConfig.setSSLConfig</dependsOn>
+  </asset>
+  <asset name="Users.addUsers" displayName="Users:addUsers">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+  </asset>
+  <asset name="Users.deleteUsers" displayName="Users:deleteUsers">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="tests.sftp" displayName="tests:sftp">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:SFTP.utils.removeAllSFTPUserAlias</dependsOn>
+    <dependsOn>IS:SFTP.utils.removeAllSFTPServerAlias</dependsOn>
+    <dependsOn>IS:SFTP.svc.addSFTPServerAlias</dependsOn>
+    <dependsOn>IS:SFTP.svc.addSFTPUserAlias</dependsOn>
+    <dependsOn>IS:SFTP.utils.listSFTPUserAlias</dependsOn>
+    <dependsOn>IS:Utilities.exportACDL</dependsOn>
+    <dependsOn>IS:Utilities.deployWithACDL</dependsOn>
+  </asset>
+  <asset name="tests.ports" displayName="tests:ports">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:security.keystores.createKeyStore</dependsOn>
+    <dependsOn>IS:Ports.createPorts</dependsOn>
+    <dependsOn>IS:Utilities.exportACDL</dependsOn>
+    <dependsOn>IS:Ports.deleteAllPorts</dependsOn>
+    <dependsOn>IS:Utilities.deployWithACDL</dependsOn>
+    <dependsOn>IS:security.keystores.deleteKeystore</dependsOn>
+  </asset>
+  <asset name="tests.scheduler" displayName="tests:scheduler">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Scheduler.deleteAllTasks.deleteAllSchTasks</dependsOn>
+    <dependsOn>IS:Scheduler.createTasks</dependsOn>
+    <dependsOn>IS:Utilities.exportACDL</dependsOn>
+    <dependsOn>IS:Utilities.deployWithACDL</dependsOn>
+  </asset>
+  <asset name="tests.usersSetup" displayName="tests:usersSetup">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Users.deleteUsers</dependsOn>
+    <dependsOn>IS:venus.srcVerification.UsersGroupsACLs</dependsOn>
+    <dependsOn>IS:Users.addUsers</dependsOn>
+  </asset>
+  <asset name="tests.keystores" displayName="tests:keystores">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:security.keystores.createKeyStore</dependsOn>
+    <dependsOn>IS:venus.srcVerification.keystores</dependsOn>
+    <dependsOn>IS:Utilities.exportACDL</dependsOn>
+    <dependsOn>IS:security.keystores.deleteKeystore</dependsOn>
+    <dependsOn>IS:Utilities.deployWithACDL</dependsOn>
+  </asset>
+  <asset name="tests.users" displayName="tests:users">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:venus.srcVerification.UsersGroupsACLs</dependsOn>
+    <dependsOn>IS:Utilities.exportACDL</dependsOn>
+    <dependsOn>IS:Users.deleteUsers</dependsOn>
+    <dependsOn>IS:Utilities.deployWithACDL</dependsOn>
+  </asset>
+  <asset name="tests.remoteServerAlias" displayName="tests:remoteServerAlias">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:security.keystores.createKeyStore</dependsOn>
+    <dependsOn>IS:RemoteServerAlias.addAllAlias</dependsOn>
+    <dependsOn>IS:Utilities.exportACDL</dependsOn>
+    <dependsOn>IS:RemoteServerAlias.deleteAllAlias</dependsOn>
+    <dependsOn>IS:Utilities.deployWithACDL</dependsOn>
+    <dependsOn>IS:security.keystores.deleteKeystore</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_Ping_Input" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_Ping_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_Ping</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteDeliveredArtifacts_Output" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_DeleteDeliveredArtifacts_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeleteDeliveredArtifactsResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_Checkpoint" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_Checkpoint">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_artifacts</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_Ping_Output" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_Ping_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_PingResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_artifact" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_artifact">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.schema_DeployerWSDV2" displayName="DeployerWSD.DeployerWSDV2_.docTypes:schema_DeployerWSDV2">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeleteAssets" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_DeleteAssets">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assetIdentifiers</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_VerifyAssetsResponse" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_VerifyAssetsResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assetInfo</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_Checkpoint_Output" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_Checkpoint_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_CheckpointResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteAssets_Output" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_DeleteAssets_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeleteAssetsResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteAssets_Input" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_DeleteAssets_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeleteAssets</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ActivateDeploymentResponse" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_ActivateDeploymentResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_messageWithAssetDetails</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ExecuteCommandResponse" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_ExecuteCommandResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_PingResponse" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_PingResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_productDetails</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ListAssetsResponse" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_ListAssetsResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assets2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeleteDeliveredArtifacts" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_DeleteDeliveredArtifacts">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeliverArtifacts_Output" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_DeliverArtifacts_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeliverArtifactsResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ActivateDeployment_Output" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_ActivateDeployment_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ActivateDeploymentResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ActivateDeployment" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_ActivateDeployment">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ExecuteCommand_Output" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_ExecuteCommand_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ExecuteCommandResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assetIdentifiers3" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_assetIdentifiers3">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assetIdentifiers2" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_assetIdentifiers2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assets" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_assets">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ListAssets_Output" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_ListAssets_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ListAssetsResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_messageWithAssetDetails" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_messageWithAssetDetails">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_productDetails" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_productDetails">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteDeliveredArtifacts_Input" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_DeleteDeliveredArtifacts_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeleteDeliveredArtifacts</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ExecuteCommand_Input" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_ExecuteCommand_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ExecuteCommand</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_GetAssetReferences_Output" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_GetAssetReferences_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_GetAssetReferencesResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_Ping" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_Ping">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ActivateCheckpoint_Input" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_ActivateCheckpoint_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ActivateCheckpoint</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ActivateCheckpoint_Output" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_ActivateCheckpoint_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ActivateCheckpointResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_GetAssetReferences_Input" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_GetAssetReferences_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_GetAssetReferences</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ActivateCheckpoint" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_ActivateCheckpoint">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_Checkpoint_Input" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_Checkpoint_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_Checkpoint</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assetIdentifiers" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_assetIdentifiers">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeliverArtifacts" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_DeliverArtifacts">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_artifact</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_VerifyAssets_Output" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_VerifyAssets_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_VerifyAssetsResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_property">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_GetAssetReferencesResponse" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_GetAssetReferencesResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assetReferences</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_CheckpointResponse" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_CheckpointResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_messageWithAssetDetails</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ActivateCheckpointResponse" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_ActivateCheckpointResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_messageWithAssetDetails</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteCheckpoint_Input" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_DeleteCheckpoint_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeleteCheckpoint</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assets2" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_assets2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteCheckpoint_Output" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_DeleteCheckpoint_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeleteCheckpointResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeleteDeliveredArtifactsResponse" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_DeleteDeliveredArtifactsResponse">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_VerifyAssets_Input" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_VerifyAssets_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_VerifyAssets</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ListAssets" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_ListAssets">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assetIdentifiers2</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeleteCheckpoint" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_DeleteCheckpoint">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ActivateDeployment_Input" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_ActivateDeployment_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ActivateDeployment</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_objectKey" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_objectKey">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeleteAssetsResponse" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_DeleteAssetsResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_messageWithAssetDetails</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeleteCheckpointResponse" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_DeleteCheckpointResponse">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_GetAssetReferences" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_GetAssetReferences">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_objectKey</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_artifacts" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_artifacts">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assets</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ExecuteCommand" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_ExecuteCommand">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeliverArtifactsResponse" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_DeliverArtifactsResponse">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_VerifyAssets" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_VerifyAssets">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assetIdentifiers3</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_property</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assetInfo" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_assetInfo">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ListAssets_Input" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_ListAssets_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_ListAssets</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeliverArtifacts_Input" displayName="DeployerWSD.DeployerWSDV2_.docTypes:DocLit_PortType_DeliverArtifacts_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_DeliverArtifacts</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.docTypes.docTypeRef_tns_assetReferences" displayName="DeployerWSD.DeployerWSDV2_.docTypes:docTypeRef_tns_assetReferences">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ExecuteCommand" displayName="DeployerWSD.DeployerWSDV2_.connectors:DocLit_PortType_ExecuteCommand">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ExecuteCommand_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ExecuteCommand_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_GetAssetReferences" displayName="DeployerWSD.DeployerWSDV2_.connectors:DocLit_PortType_GetAssetReferences">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_GetAssetReferences_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_GetAssetReferences_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ActivateDeployment" displayName="DeployerWSD.DeployerWSDV2_.connectors:DocLit_PortType_ActivateDeployment">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ActivateDeployment_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ActivateDeployment_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ListAssets" displayName="DeployerWSD.DeployerWSDV2_.connectors:DocLit_PortType_ListAssets">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ListAssets_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ListAssets_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_VerifyAssets" displayName="DeployerWSD.DeployerWSDV2_.connectors:DocLit_PortType_VerifyAssets">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_VerifyAssets_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_VerifyAssets_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_DeleteAssets" displayName="DeployerWSD.DeployerWSDV2_.connectors:DocLit_PortType_DeleteAssets">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteAssets_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteAssets_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_Checkpoint" displayName="DeployerWSD.DeployerWSDV2_.connectors:DocLit_PortType_Checkpoint">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_Checkpoint_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_Checkpoint_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_DeleteDeliveredArtifacts" displayName="DeployerWSD.DeployerWSDV2_.connectors:DocLit_PortType_DeleteDeliveredArtifacts">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteDeliveredArtifacts_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteDeliveredArtifacts_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_DeleteCheckpoint" displayName="DeployerWSD.DeployerWSDV2_.connectors:DocLit_PortType_DeleteCheckpoint">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteCheckpoint_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteCheckpoint_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ActivateCheckpoint" displayName="DeployerWSD.DeployerWSDV2_.connectors:DocLit_PortType_ActivateCheckpoint">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ActivateCheckpoint_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ActivateCheckpoint_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_DeliverArtifacts" displayName="DeployerWSD.DeployerWSDV2_.connectors:DocLit_PortType_DeliverArtifacts">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeliverArtifacts_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeliverArtifacts_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_Ping" displayName="DeployerWSD.DeployerWSDV2_.connectors:DocLit_PortType_Ping">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_Ping_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_Ping_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjects_Input" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_DeployObjects_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_DeployObjectsRequest</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjects_Output" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_GetObjects_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_GetObjectsResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_Ping_Output" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_Ping_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_PingResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetConnectionInfo_Output" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_GetConnectionInfo_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetConnectionInfoResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetConnectionInfoResponse" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_GetConnectionInfoResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_SOAP-FAULT</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_AssetArtifactsType" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_dx_AssetArtifactsType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetDependenciesRequest" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_GetDependenciesRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ObjectIdentifierType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_auth</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_ListObjects_Input" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_ListObjects_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_ListObjectsRequest</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_PingRequest" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_PingRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_auth</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetDependencies_Input" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_GetDependencies_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetDependenciesRequest</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_DeployObjectsRequest" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_DeployObjectsRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_GetObjectType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_auth</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_SOAP-FAULT" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_SOAP-FAULT">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_detail</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetConnectionInfo_Input" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_GetConnectionInfo_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetConnectionInfoRequest</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ObjectDependencyType" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_dx_ObjectDependencyType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ObjectType</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_DeployObjectsWithACDLRequest" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_DeployObjectsWithACDLRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_AssetArtifactsType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_auth</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetObjectVarSubResponse" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_GetObjectVarSubResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_SOAP-FAULT</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_VerifyObject_Input" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_VerifyObject_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_VerifyObjectRequest</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetObjectsWithACDLRequest" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_GetObjectsWithACDLRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_FullObjectType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_auth</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjectsWithVarsub_Output" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_DeployObjectsWithVarsub_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_DeployObjectsResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_GetObjectsRequest" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_dx_GetObjectsRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ObjectIdentifierType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_auth</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_DeployObjectsWithVarsubRequest" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_DeployObjectsWithVarsubRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_GetObjectType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_VarsubItemType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_auth</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjects_Input" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_GetObjects_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_GetObjectsRequest</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_ListObjects_Output" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_ListObjects_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_ListObjectsResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_dx_PropertyType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_DeployObjectsWithACDLResponse" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_DeployObjectsWithACDLResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ACDLReportMessageType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_SOAP-FAULT</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_PingResponse" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_PingResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_SOAP-FAULT</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_GetObjectType" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_dx_GetObjectType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_FullObjectType</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_Ping_Input" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_Ping_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_PingRequest</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_VerifyObjectRequest" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_VerifyObjectRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ObjectIdentifierType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_auth</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetDependencies_Output" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_GetDependencies_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetDependenciesResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetConnectionInfoRequest" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_GetConnectionInfoRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_auth</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjectVarSub_Output" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_GetObjectVarSub_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetObjectVarSubResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_VerifyObjectResponse" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_VerifyObjectResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_SOAP-FAULT</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ObjectIdentifierType" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_dx_ObjectIdentifierType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.schema_DeployerWSD_2" displayName="DeployerWSD.DeployerWSD_.docTypes:schema_DeployerWSD_2">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_VerifyObject_Output" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_VerifyObject_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_VerifyObjectResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_FullObjectType" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_dx_FullObjectType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_ListObjectsRequest" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_ListObjectsRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_auth</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetObjectsWithACDLResponse" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_GetObjectsWithACDLResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ACDLReportMessageType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_AssetArtifactsType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_SOAP-FAULT</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ACDLReportMessageType" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_dx_ACDLReportMessageType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjects_Output" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_DeployObjects_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_DeployObjectsResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_DeployObjectsResponse" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_DeployObjectsResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ReportMessageType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_SOAP-FAULT</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_detail" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_detail">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetDependenciesResponse" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_GetDependenciesResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ObjectDependencyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_SOAP-FAULT</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_GetObjectsResponse" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_dx_GetObjectsResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ReportMessageType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ObjectIdentifierType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_SOAP-FAULT</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjectsWithACDL_Input" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_DeployObjectsWithACDL_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_DeployObjectsWithACDLRequest</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjectsWithACDL_Output" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_GetObjectsWithACDL_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetObjectsWithACDLResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjectsWithACDL_Input" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_GetObjectsWithACDL_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetObjectsWithACDLRequest</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ObjectType" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_dx_ObjectType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_ListObjectsResponse" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_ListObjectsResponse">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_FullObjectType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_SOAP-FAULT</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_VarsubItemType" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_dx_VarsubItemType">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjectsWithVarsub_Input" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_DeployObjectsWithVarsub_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_DeployObjectsWithVarsubRequest</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjectVarSub_Input" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_GetObjectVarSub_Input">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetObjectVarSubRequest</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_GetObjectVarSubRequest" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_GetObjectVarSubRequest">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ObjectIdentifierType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_PropertyType</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_auth</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjectsWithACDL_Output" displayName="DeployerWSD.DeployerWSD_.docTypes:DeployerPlugin2_DeployObjectsWithACDL_Output">
+    <implementation.generic type="isdocumenttype" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_DeployObjectsWithACDLResponse</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_dx_ReportMessageType" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_dx_ReportMessageType">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.docTypeRef_tns_auth" displayName="DeployerWSD.DeployerWSD_.docTypes:docTypeRef_tns_auth">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.docTypes.schema_DeployerWSD" displayName="DeployerWSD.DeployerWSD_.docTypes:schema_DeployerWSD">
+    <implementation.generic type="isschema" />
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_GetObjects" displayName="DeployerWSD.DeployerWSD_.connectors:DeployerPlugin2_GetObjects">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjects_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjects_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_GetObjectVarSub" displayName="DeployerWSD.DeployerWSD_.connectors:DeployerPlugin2_GetObjectVarSub">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjectVarSub_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjectVarSub_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_DeployObjects" displayName="DeployerWSD.DeployerWSD_.connectors:DeployerPlugin2_DeployObjects">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjects_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjects_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_DeployObjectsWithACDL" displayName="DeployerWSD.DeployerWSD_.connectors:DeployerPlugin2_DeployObjectsWithACDL">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjectsWithACDL_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjectsWithACDL_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_GetDependencies" displayName="DeployerWSD.DeployerWSD_.connectors:DeployerPlugin2_GetDependencies">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetDependencies_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetDependencies_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_GetConnectionInfo" displayName="DeployerWSD.DeployerWSD_.connectors:DeployerPlugin2_GetConnectionInfo">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetConnectionInfo_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetConnectionInfo_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_DeployObjectsWithVarsub" displayName="DeployerWSD.DeployerWSD_.connectors:DeployerPlugin2_DeployObjectsWithVarsub">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjectsWithVarsub_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjectsWithVarsub_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_VerifyObject" displayName="DeployerWSD.DeployerWSD_.connectors:DeployerPlugin2_VerifyObject">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_VerifyObject_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_VerifyObject_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_ListObjects" displayName="DeployerWSD.DeployerWSD_.connectors:DeployerPlugin2_ListObjects">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_ListObjects_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_ListObjects_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_Ping" displayName="DeployerWSD.DeployerWSD_.connectors:DeployerPlugin2_Ping">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_Ping_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_Ping_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_GetObjectsWithACDL" displayName="DeployerWSD.DeployerWSD_.connectors:DeployerPlugin2_GetObjectsWithACDL">
+    <implementation.generic type="iswsconnector" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjectsWithACDL_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjectsWithACDL_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.deliverAssets" displayName="DeployerWSD:deliverAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.getAssetNames</dependsOn>
+    <dependsOn>IS:Utilities.createPartialACDLRaw</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_DeliverArtifacts</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.checkpointAssets" displayName="DeployerWSD:checkpointAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.getAssetNames</dependsOn>
+    <dependsOn>IS:Utilities.createPartialACDLRaw</dependsOn>
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_Checkpoint</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.getAssetReferencesDesignDoubleByte" displayName="DeployerWSD:getAssetReferencesDesignDoubleByte">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_GetAssetReferences</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.getAssetReferencesDesignDAR" displayName="DeployerWSD:getAssetReferencesDesignDAR">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.getAssetNames</dependsOn>
+    <dependsOn>IS:Utilities.createPartialACDLRaw</dependsOn>
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_GetAssetReferences</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.verifyAssets" displayName="DeployerWSD:verifyAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.getAssetNames</dependsOn>
+    <dependsOn>IS:Utilities.createPartialACDLRaw</dependsOn>
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_VerifyAssets</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.deleteAssets" displayName="DeployerWSD:deleteAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.getAssetNames</dependsOn>
+    <dependsOn>IS:Utilities.createPartialACDLRaw</dependsOn>
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_DeleteAssets</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.activateCheckpoint" displayName="DeployerWSD:activateCheckpoint">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ActivateCheckpoint</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.listAssets" displayName="DeployerWSD:listAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ListAssets</dependsOn>
+    <dependsOn>IS:Utilities.getAssetNames</dependsOn>
+    <dependsOn>IS:Utilities.createPartialACDLRaw</dependsOn>
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.deleteDeliveredAssets" displayName="DeployerWSD:deleteDeliveredAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_DeleteDeliveredArtifacts</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.verifyAssetsDesign" displayName="DeployerWSD:verifyAssetsDesign">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.getAssetNames</dependsOn>
+    <dependsOn>IS:Utilities.createPartialACDLRaw</dependsOn>
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_VerifyAssets</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.getAssetReferences" displayName="DeployerWSD:getAssetReferences">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.getAssetNames</dependsOn>
+    <dependsOn>IS:Utilities.createPartialACDLRaw</dependsOn>
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_GetAssetReferences</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.deployPartialACDL" displayName="DeployerWSD:deployPartialACDL">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.getAssetNames</dependsOn>
+    <dependsOn>IS:Utilities.createPartialACDLRaw</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_DeployObjectsWithACDL</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.getAssetReferencesDesign" displayName="DeployerWSD:getAssetReferencesDesign">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.getAssetNames</dependsOn>
+    <dependsOn>IS:Utilities.createPartialACDLRaw</dependsOn>
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_GetAssetReferences</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.activateDeliveredAssets" displayName="DeployerWSD:activateDeliveredAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ActivateDeployment</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.activateDeliveredAssetsSimulate" displayName="DeployerWSD:activateDeliveredAssetsSimulate">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ActivateDeployment</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.deleteCheckpoint" displayName="DeployerWSD:deleteCheckpoint">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_DeleteCheckpoint</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSD" displayName="DeployerWSD:DeployerWSD">
+    <implementation.generic type="iswsdconsumer" />
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjects_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjects_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjectsWithVarsub_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjectsWithVarsub_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetConnectionInfo_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetConnectionInfo_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetDependencies_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetDependencies_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjects_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjects_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjectVarSub_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjectVarSub_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_ListObjects_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_ListObjects_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_Ping_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_Ping_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_VerifyObject_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_VerifyObject_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjectsWithACDL_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_DeployObjectsWithACDL_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjectsWithACDL_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.docTypes.DeployerPlugin2_GetObjectsWithACDL_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_DeployObjects</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_DeployObjectsWithVarsub</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_GetConnectionInfo</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_GetDependencies</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_GetObjects</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_GetObjectVarSub</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_ListObjects</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_Ping</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_VerifyObject</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_DeployObjectsWithACDL</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSD_.connectors.DeployerPlugin2_GetObjectsWithACDL</dependsOn>
+  </asset>
+  <asset name="DeployerWSD.DeployerWSDV2" displayName="DeployerWSD:DeployerWSDV2">
+    <implementation.generic type="iswsdconsumer" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteDeliveredArtifacts_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteDeliveredArtifacts_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ActivateDeployment_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ActivateDeployment_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteCheckpoint_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteCheckpoint_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ListAssets_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ListAssets_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteAssets_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeleteAssets_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ExecuteCommand_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ExecuteCommand_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ActivateCheckpoint_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_ActivateCheckpoint_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeliverArtifacts_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_DeliverArtifacts_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_Ping_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_Ping_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_GetAssetReferences_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_GetAssetReferences_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_Checkpoint_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_Checkpoint_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_VerifyAssets_Input</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.docTypes.DocLit_PortType_VerifyAssets_Output</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_DeleteDeliveredArtifacts</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ActivateDeployment</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_DeleteCheckpoint</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ListAssets</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_DeleteAssets</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ExecuteCommand</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ActivateCheckpoint</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_DeliverArtifacts</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_Ping</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_GetAssetReferences</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_Checkpoint</dependsOn>
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_VerifyAssets</dependsOn>
+  </asset>
+  <asset name="services.receive" displayName="services:receive">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="services.getEventTypeDefinition" displayName="services:getEventTypeDefinition">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:StringUtilities.stringListCompareAndSort</dependsOn>
+    <dependsOn>IS:stringContains.genericStringContains</dependsOn>
+  </asset>
+  <asset name="services.ports" displayName="services:ports">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:venus.srcVerification.Ports</dependsOn>
+  </asset>
+  <asset name="services.concat" displayName="services:concat">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="services.jndiTrigger5" displayName="services:jndiTrigger5">
+    <implementation.generic type="isjmstrigger" />
+  </asset>
+  <asset name="services.jndiTrigger4" displayName="services:jndiTrigger4">
+    <implementation.generic type="isjmstrigger" />
+  </asset>
+  <asset name="services.jndiTrigger3" displayName="services:jndiTrigger3">
+    <implementation.generic type="isjmstrigger" />
+  </asset>
+  <asset name="services.jndiTrigger2" displayName="services:jndiTrigger2">
+    <implementation.generic type="isjmstrigger" />
+  </asset>
+  <asset name="services.jndiTrigger1" displayName="services:jndiTrigger1">
+    <implementation.generic type="isjmstrigger" />
+  </asset>
+  <asset name="services.nativeTrigger" displayName="services:nativeTrigger">
+    <implementation.generic type="isjmstrigger" />
+  </asset>
+  <asset name="services.cf2Trigger" displayName="services:cf2Trigger">
+    <implementation.generic type="isjmstrigger" />
+  </asset>
+  <asset name="Checkpoint.activateCheckpointPackage.copyCRMoAccessPackageToReplicateInbound" displayName="Checkpoint.activateCheckpointPackage:copyCRMoAccessPackageToReplicateInbound">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.Checkpoint.activateCheckpointPackage.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.Checkpoint.activateCheckpointPackage.class</dependsOn>
+  </asset>
+  <asset name="Checkpoint.activateCheckpointPackage.activateassets" displayName="Checkpoint.activateCheckpointPackage:activateassets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.wscClient.wscDeployer_.connectors.DocLit_PortType_ActivateDeployment</dependsOn>
+  </asset>
+  <asset name="Checkpoint.activateCheckpointPackage.deliverassetsMultiplePackages" displayName="Checkpoint.activateCheckpointPackage:deliverassetsMultiplePackages">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+    <dependsOn>IS:DeployerTests.utils.getXOPObjectsForACDLandBinary</dependsOn>
+    <dependsOn>IS:DeployerTests.wscClient.wscDeployer_.connectors.DocLit_PortType_DeliverArtifacts</dependsOn>
+  </asset>
+  <asset name="Checkpoint.activateCheckpointPackage.createcheckpoint" displayName="Checkpoint.activateCheckpointPackage:createcheckpoint">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Checkpoint.createCheckpointPackagePartial</dependsOn>
+  </asset>
+  <asset name="Checkpoint.activateCheckpointPackage.deletedeliveredartifacts" displayName="Checkpoint.activateCheckpointPackage:deletedeliveredartifacts">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.testCases.deleteDeliveredArtifacts.passedDeploymentId</dependsOn>
+  </asset>
+  <asset name="Checkpoint.activateCheckpointPackage.deliverassets" displayName="Checkpoint.activateCheckpointPackage:deliverassets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.testCases.deliverArtifacts.deliverSingleArtifact</dependsOn>
+  </asset>
+  <asset name="Checkpoint.activateCheckpointPackage.deleteCheckpoint" displayName="Checkpoint.activateCheckpointPackage:deleteCheckpoint">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Checkpoint.deleteCheckpoint</dependsOn>
+  </asset>
+  <asset name="Checkpoint.activateCheckpointPackage.activateassetsSimulate" displayName="Checkpoint.activateCheckpointPackage:activateassetsSimulate">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.wscClient.wscDeployer_.connectors.DocLit_PortType_ActivateDeployment</dependsOn>
+  </asset>
+  <asset name="Checkpoint.activateCheckpointPackage.activatePackage" displayName="Checkpoint.activateCheckpointPackage:activatePackage">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Checkpoint.activateCheckpointPackage.activatecheckpoint" displayName="Checkpoint.activateCheckpointPackage:activatecheckpoint">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.wscClient.wscDeployer_.connectors.DocLit_PortType_ActivateCheckpoint</dependsOn>
+  </asset>
+  <asset name="Checkpoint.deletePackageAssets.verifyAssets" displayName="Checkpoint.deletePackageAssets:verifyAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.testCases.verifyAssets.verifyAssets</dependsOn>
+  </asset>
+  <asset name="Checkpoint.deletePackageAssets.deleteAssets" displayName="Checkpoint.deletePackageAssets:deleteAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.testCases.deleteAssets.deleteAssets</dependsOn>
+  </asset>
+  <asset name="Checkpoint.createCheckpointPackagePartial" displayName="Checkpoint:createCheckpointPackagePartial">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+    <dependsOn>IS:DeployerTests.wscClient.wscDeployer_.connectors.DocLit_PortType_Checkpoint</dependsOn>
+  </asset>
+  <asset name="Checkpoint.createCheckpointISConfigurationPartial" displayName="Checkpoint:createCheckpointISConfigurationPartial">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+    <dependsOn>IS:DeployerTests.wscClient.wscDeployer_.connectors.DocLit_PortType_Checkpoint</dependsOn>
+  </asset>
+  <asset name="Checkpoint.negativeListAssets" displayName="Checkpoint:negativeListAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerWSD.DeployerWSDV2_.connectors.DocLit_PortType_ListAssets</dependsOn>
+  </asset>
+  <asset name="Checkpoint.deleteCheckpoint" displayName="Checkpoint:deleteCheckpoint">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.wscClient.wscDeployer_.connectors.DocLit_PortType_DeleteCheckpoint</dependsOn>
+  </asset>
+  <asset name="Checkpoint.createCheckpointPackageFull" displayName="Checkpoint:createCheckpointPackageFull">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+    <dependsOn>IS:DeployerTests.wscClient.wscDeployer_.connectors.DocLit_PortType_Checkpoint</dependsOn>
+  </asset>
+  <asset name="Checkpoint.createCheckpointISConfigurationFull" displayName="Checkpoint:createCheckpointISConfigurationFull">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.utils.initNamespace</dependsOn>
+    <dependsOn>IS:util.getSize</dependsOn>
+    <dependsOn>IS:util.populateTypeArray</dependsOn>
+    <dependsOn>IS:DeployerTests.wscClient.wscDeployer_.connectors.DocLit_PortType_Checkpoint</dependsOn>
+  </asset>
+  <asset name="Checkpoint.activateCheckpoint" displayName="Checkpoint:activateCheckpoint">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:DeployerTests.wscClient.wscDeployer_.connectors.DocLit_PortType_ActivateCheckpoint</dependsOn>
+  </asset>
+  <asset name="Utilities.deployWithACDL" displayName="Utilities:deployWithACDL">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Utilities.deployPartialACDL" displayName="Utilities:deployPartialACDL">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.getAssetNames</dependsOn>
+    <dependsOn>IS:Utilities.createPartialACDLRaw</dependsOn>
+    <dependsOn>IS:Utilities.cleanACDLString</dependsOn>
+    <dependsOn>IS:Utilities.isACDLStringEqual</dependsOn>
+  </asset>
+  <asset name="Utilities.getZipFileContentAsString" displayName="Utilities:getZipFileContentAsString">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FileUtilities.getZipFileContentAsString</dependsOn>
+  </asset>
+  <asset name="Utilities.cleanACDLString" displayName="Utilities:cleanACDLString">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.removeXMLElementFromString</dependsOn>
+  </asset>
+  <asset name="Utilities.getZipFiles" displayName="Utilities:getZipFiles">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Utilities.isACDLStringEqual" displayName="Utilities:isACDLStringEqual">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.Utilities.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.Utilities.class</dependsOn>
+    <dependsOn>IS:Utilities.removeXMLElementFromString</dependsOn>
+    <dependsOn>IS:Utilities.isACDLFileEqual</dependsOn>
+  </asset>
+  <asset name="Utilities.compareActualACDLToExpected" displayName="Utilities:compareActualACDLToExpected">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.getACDLfile</dependsOn>
+    <dependsOn>IS:Utilities.isACDLFileEqual</dependsOn>
+  </asset>
+  <asset name="Utilities.getEventTypeDefinition" displayName="Utilities:getEventTypeDefinition">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:StringUtilities.stringListCompareAndSort</dependsOn>
+  </asset>
+  <asset name="Utilities.createPartialACDLRaw" displayName="Utilities:createPartialACDLRaw">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:test.deployer.createPartialContribution</dependsOn>
+  </asset>
+  <asset name="Utilities.getRawACDLfile" displayName="Utilities:getRawACDLfile">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Utilities.cleanRuntime" displayName="Utilities:cleanRuntime">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Ports.deleteAllPorts</dependsOn>
+    <dependsOn>IS:Scheduler.deleteAllTasks.deleteAllSchTasks</dependsOn>
+    <dependsOn>IS:Users.deleteUsers</dependsOn>
+    <dependsOn>IS:RemoteServerAlias.deleteAllAlias</dependsOn>
+    <dependsOn>IS:security.keystores.deleteKeystore</dependsOn>
+    <dependsOn>IS:ProxyAlias.DeleteProxy</dependsOn>
+  </asset>
+  <asset name="Utilities.packageActivate" displayName="Utilities:packageActivate">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Utilities.packageDelete" displayName="Utilities:packageDelete">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Utilities.removeXMLElementFromString" displayName="Utilities:removeXMLElementFromString">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.Utilities.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.Utilities.class</dependsOn>
+    <dependsOn>IS:Utilities.isACDLStringEqual</dependsOn>
+    <dependsOn>IS:Utilities.isACDLFileEqual</dependsOn>
+  </asset>
+  <asset name="Utilities.exportACDL" displayName="Utilities:exportACDL">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Utilities.isACDLFileEqual" displayName="Utilities:isACDLFileEqual">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.Utilities.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.Utilities.class</dependsOn>
+    <dependsOn>IS:Utilities.isACDLStringEqual</dependsOn>
+    <dependsOn>IS:Utilities.removeXMLElementFromString</dependsOn>
+  </asset>
+  <asset name="Utilities.getACDLfile" displayName="Utilities:getACDLfile">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.cleanACDLString</dependsOn>
+  </asset>
+  <asset name="Utilities.getAssetNames" displayName="Utilities:getAssetNames">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Utilities.getRawACDLfile</dependsOn>
+    <dependsOn>IS:StringUtilities.startsWith</dependsOn>
+    <dependsOn>IS:StringUtilities.contains</dependsOn>
+  </asset>
+  <asset name="Utilities.acdlContainsString" displayName="Utilities:acdlContainsString">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:stringContains.genericStringContains</dependsOn>
+  </asset>
+  <asset name="Utilities.getPackageInformation" displayName="Utilities:getPackageInformation">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Utilities.createPartialACDL" displayName="Utilities:createPartialACDL">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:test.deployer.createPartialContribution</dependsOn>
+    <dependsOn>IS:Utilities.cleanACDLString</dependsOn>
+  </asset>
+  <asset name="ProxyAlias.AddProxy" displayName="ProxyAlias:AddProxy">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="ProxyAlias.DeleteProxy" displayName="ProxyAlias:DeleteProxy">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="URLAlias.ping" displayName="URLAlias:ping">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="URLAlias.verifyURLAlias" displayName="URLAlias:verifyURLAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="URLAlias.addURLAlias" displayName="URLAlias:addURLAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="URLAlias.deleteURLAlias" displayName="URLAlias:deleteURLAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="URLAlias.testAlias" displayName="URLAlias:testAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="RemoteServerAlias.deleteRemoteAlias_2" displayName="RemoteServerAlias:deleteRemoteAlias_2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="RemoteServerAlias.deleteRemoteAlias_1" displayName="RemoteServerAlias:deleteRemoteAlias_1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="RemoteServerAlias.deleteAllAlias" displayName="RemoteServerAlias:deleteAllAlias">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:RemoteServerAlias.deleteRemoteAlias</dependsOn>
+    <dependsOn>IS:RemoteServerAlias.deleteRemoteAlias_1</dependsOn>
+    <dependsOn>IS:RemoteServerAlias.deleteRemoteAlias_2</dependsOn>
+  </asset>
+  <asset name="RemoteServerAlias.addRemoteAlias" displayName="RemoteServerAlias:addRemoteAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="RemoteServerAlias.deleteRemoteAlias" displayName="RemoteServerAlias:deleteRemoteAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="RemoteServerAlias.addAllAlias" displayName="RemoteServerAlias:addAllAlias">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:RemoteServerAlias.addRemoteAlias</dependsOn>
+    <dependsOn>IS:RemoteServerAlias.addRemoteAlias_1</dependsOn>
+    <dependsOn>IS:RemoteServerAlias.addRemoteAlias_2</dependsOn>
+  </asset>
+  <asset name="RemoteServerAlias.addRemoteAlias_2" displayName="RemoteServerAlias:addRemoteAlias_2">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="RemoteServerAlias.addRemoteAlias_1" displayName="RemoteServerAlias:addRemoteAlias_1">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="security.certificates.clientCertificates.importClientCerts" displayName="security.certificates.clientCertificates:importClientCerts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="security.keystores.deleteKeystore" displayName="security.keystores:deleteKeystore">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="security.keystores.createKeyStore" displayName="security.keystores:createKeyStore">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="docs.Documents.DupNamesValid801_RPCEnc_2" displayName="docs.Documents:DupNamesValid801_RPCEnc_2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.DuplicateNames" displayName="docs.Documents:DuplicateNames">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.ResFltDocLit" displayName="docs.Documents:ResFltDocLit">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.ResHdrDocLit" displayName="docs.Documents:ResHdrDocLit">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.Input_RefdDoc" displayName="docs.Documents:Input_RefdDoc">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.inputoutput" displayName="docs.Documents:inputoutput">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:docs.Documents.Input_RefdDoc</dependsOn>
+    <dependsOn>IS:docs.Documents.Output_RefdDoc</dependsOn>
+  </asset>
+  <asset name="docs.Documents.Input_RefdDoc_forDocLit" displayName="docs.Documents:Input_RefdDoc_forDocLit">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.DupNamesValid801_RPCLit_2" displayName="docs.Documents:DupNamesValid801_RPCLit_2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.DupNamesValid801_RPCLit_1" displayName="docs.Documents:DupNamesValid801_RPCLit_1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.DupNamesValid801_3" displayName="docs.Documents:DupNamesValid801_3">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.Input_RefdDoc_forRPCLit" displayName="docs.Documents:Input_RefdDoc_forRPCLit">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.DupNamesValid801_2" displayName="docs.Documents:DupNamesValid801_2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.DupNamesValid801_1" displayName="docs.Documents:DupNamesValid801_1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.ReqHdrDocRPCEnc" displayName="docs.Documents:ReqHdrDocRPCEnc">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.ReqFltDocRPCEnc" displayName="docs.Documents:ReqFltDocRPCEnc">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.DupNamesSpec3" displayName="docs.Documents:DupNamesSpec3">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:docs.Documents.DupNamesValid3</dependsOn>
+  </asset>
+  <asset name="docs.Documents.DupNamesSpec2" displayName="docs.Documents:DupNamesSpec2">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:docs.Documents.DupNamesValid2</dependsOn>
+  </asset>
+  <asset name="docs.Documents.DupNamesSpec1" displayName="docs.Documents:DupNamesSpec1">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:docs.Documents.DupNamesValid1</dependsOn>
+  </asset>
+  <asset name="docs.Documents.inputoutput_forRPCLit_801" displayName="docs.Documents:inputoutput_forRPCLit_801">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:docs.Documents.Input_RefdDoc_forDocLit</dependsOn>
+    <dependsOn>IS:docs.Documents.Output_RefdDoc_forDocLit</dependsOn>
+  </asset>
+  <asset name="docs.Documents.inputoutput_forDocLit" displayName="docs.Documents:inputoutput_forDocLit">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:docs.Documents.Input_RefdDoc_forDocLit</dependsOn>
+    <dependsOn>IS:docs.Documents.Output_RefdDoc_forDocLit</dependsOn>
+  </asset>
+  <asset name="docs.Documents.DuplicateNameSpecDocLit" displayName="docs.Documents:DuplicateNameSpecDocLit">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:docs.Documents.DuplicateNames</dependsOn>
+  </asset>
+  <asset name="docs.Documents.inputoutput_forRPCLit" displayName="docs.Documents:inputoutput_forRPCLit">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:docs.Documents.Input_RefdDoc_forDocLit</dependsOn>
+    <dependsOn>IS:docs.Documents.Output_RefdDoc_forDocLit</dependsOn>
+  </asset>
+  <asset name="docs.Documents.ResHdrDocRPCEnc" displayName="docs.Documents:ResHdrDocRPCEnc">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.ResFltDocRPCEnc" displayName="docs.Documents:ResFltDocRPCEnc">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.Output_RefdDoc_forDocLit" displayName="docs.Documents:Output_RefdDoc_forDocLit">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.Output_RefdDoc" displayName="docs.Documents:Output_RefdDoc">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.DupNamesValid3" displayName="docs.Documents:DupNamesValid3">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.DupNamesValid2" displayName="docs.Documents:DupNamesValid2">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.DupNamesValid1" displayName="docs.Documents:DupNamesValid1">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.Output_RefdDoc_forRPCLit" displayName="docs.Documents:Output_RefdDoc_forRPCLit">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.DupName801_3" displayName="docs.Documents:DupName801_3">
+    <implementation.generic type="isspecification" />
+    <dependsOn>IS:docs.Documents.DupNamesValid801_3</dependsOn>
+  </asset>
+  <asset name="docs.Documents.ReqFltDocLit" displayName="docs.Documents:ReqFltDocLit">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Documents.ReqHdrDocLit" displayName="docs.Documents:ReqHdrDocLit">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="docs.Service.DupNames801_RPCEnc2" displayName="docs.Service:DupNames801_RPCEnc2">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.DupNamesValid801_RPCEnc_2</dependsOn>
+  </asset>
+  <asset name="docs.Service.responseHandler" displayName="docs.Service:responseHandler">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="docs.Service.requestHandler" displayName="docs.Service:requestHandler">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="docs.Service.ProvSvcRPCEnc" displayName="docs.Service:ProvSvcRPCEnc">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.inputoutput</dependsOn>
+  </asset>
+  <asset name="docs.Service.mapping" displayName="docs.Service:mapping">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="docs.Service.ProvSvcRPCLit_801" displayName="docs.Service:ProvSvcRPCLit_801">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.inputoutput_forRPCLit_801</dependsOn>
+  </asset>
+  <asset name="docs.Service.ProvSvcDocLit" displayName="docs.Service:ProvSvcDocLit">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.inputoutput_forDocLit</dependsOn>
+  </asset>
+  <asset name="docs.Service.DupName801_3" displayName="docs.Service:DupName801_3">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.DupNamesValid801_3</dependsOn>
+  </asset>
+  <asset name="docs.Service.DupName801_2" displayName="docs.Service:DupName801_2">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.DupNamesValid801_2</dependsOn>
+  </asset>
+  <asset name="docs.Service.DupName801_1" displayName="docs.Service:DupName801_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.DupNamesValid801_1</dependsOn>
+  </asset>
+  <asset name="docs.Service.DupName801_RPCLit_2" displayName="docs.Service:DupName801_RPCLit_2">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.DupNamesValid801_RPCLit_2</dependsOn>
+  </asset>
+  <asset name="docs.Service.DupName801_RPCLit_1" displayName="docs.Service:DupName801_RPCLit_1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.DupNamesValid801_RPCLit_1</dependsOn>
+  </asset>
+  <asset name="docs.Service.DupNamesValid3" displayName="docs.Service:DupNamesValid3">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.DupNamesSpec3</dependsOn>
+  </asset>
+  <asset name="docs.Service.DupNamesValid2" displayName="docs.Service:DupNamesValid2">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.DupNamesSpec2</dependsOn>
+  </asset>
+  <asset name="docs.Service.DupNamesValid1" displayName="docs.Service:DupNamesValid1">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.DupNamesSpec1</dependsOn>
+  </asset>
+  <asset name="docs.Service.DuplicateNameInputOutput" displayName="docs.Service:DuplicateNameInputOutput">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.DuplicateNameSpecDocLit</dependsOn>
+  </asset>
+  <asset name="docs.Service.simpleInputOutput" displayName="docs.Service:simpleInputOutput">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="docs.Service.ProvSvcRPCLit" displayName="docs.Service:ProvSvcRPCLit">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Documents.inputoutput_forRPCLit</dependsOn>
+  </asset>
+  <asset name="docs.Service.mappingFaults" displayName="docs.Service:mappingFaults">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:docs.Service.mapping</dependsOn>
+  </asset>
+  <asset name="Ports.deleteAllPorts" displayName="Ports:deleteAllPorts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Ports.createPorts" displayName="Ports:createPorts">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FileUtilities.exists</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+    <dependsOn>IS:ThreadUtilities.sleep</dependsOn>
+  </asset>
+  <asset name="SFTP.utils.listSFTPUserAlias" displayName="SFTP.utils:listSFTPUserAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="SFTP.utils.removeAllSFTPUserAlias" displayName="SFTP.utils:removeAllSFTPUserAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="SFTP.utils.createSFTPUserAlias" displayName="SFTP.utils:createSFTPUserAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="SFTP.utils.removeSFTPServerAlias" displayName="SFTP.utils:removeSFTPServerAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="SFTP.utils.removeSFTPUserAlias" displayName="SFTP.utils:removeSFTPUserAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="SFTP.utils.removeAllSFTPServerAlias" displayName="SFTP.utils:removeAllSFTPServerAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="SFTP.utils.connectionTestSvc" displayName="SFTP.utils:connectionTestSvc">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="SFTP.utils.createSFTPServerAlias" displayName="SFTP.utils:createSFTPServerAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="SFTP.svc.addSFTPServerAlias" displayName="SFTP.svc:addSFTPServerAlias">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:SFTP.utils.createSFTPServerAlias</dependsOn>
+  </asset>
+  <asset name="SFTP.svc.createSFTPAssets" displayName="SFTP.svc:createSFTPAssets">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:SFTP.utils.removeAllSFTPUserAlias</dependsOn>
+    <dependsOn>IS:SFTP.utils.removeAllSFTPServerAlias</dependsOn>
+    <dependsOn>IS:SFTP.svc.addSFTPServerAlias</dependsOn>
+    <dependsOn>IS:SFTP.svc.addSFTPUserAlias</dependsOn>
+  </asset>
+  <asset name="SFTP.svc.addSFTPUserAlias" displayName="SFTP.svc:addSFTPUserAlias">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:SFTP.utils.createSFTPUserAlias</dependsOn>
+  </asset>
+  <asset name="quiesce.createQuiescePort" displayName="quiesce:createQuiescePort">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="DeployerDeployTest.deployfromreplicatesuccess" displayName="DeployerDeployTest:deployfromreplicatesuccess">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="DeployerDeployTest.deployfromreplicatePackageFileOnlyerror" displayName="DeployerDeployTest:deployfromreplicatePackageFileOnlyerror">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="DeployerDeployTest.deploypackage" displayName="DeployerDeployTest:deploypackage">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="DeployerDeployTest.deployfromreplicateerror" displayName="DeployerDeployTest:deployfromreplicateerror">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Scheduler.deleteAllTasks.deleteAllSchTasks" displayName="Scheduler.deleteAllTasks:deleteAllSchTasks">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Scheduler.createTasks" displayName="Scheduler:createTasks">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Scheduler.myOneTimeClusteredTask" displayName="Scheduler:myOneTimeClusteredTask">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Scheduler.myComplexClusteredTask" displayName="Scheduler:myComplexClusteredTask">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Scheduler.mySimpleRepeatingClusteredTask" displayName="Scheduler:mySimpleRepeatingClusteredTask">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Scheduler.myOneTimeTask" displayName="Scheduler:myOneTimeTask">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Scheduler.mySimpleRepeatingTask" displayName="Scheduler:mySimpleRepeatingTask">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Scheduler.myComplexTask" displayName="Scheduler:myComplexTask">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="util.getSize" displayName="util:getSize">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.util.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.util.class</dependsOn>
+    <dependsOn>IS:util.populateTypeArray</dependsOn>
+  </asset>
+  <asset name="util.ResultService" displayName="util:ResultService">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="util.populateTypeArray" displayName="util:populateTypeArray">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.util.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.util.class</dependsOn>
+    <dependsOn>IS:util.getSize</dependsOn>
+  </asset>
+  <asset name="Cluster.isClusterEnabled" displayName="Cluster:isClusterEnabled">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusACDL.code.source.Cluster.java</dependsOn>
+    <dependsOn>IS:venusACDL.code.classes.Cluster.class</dependsOn>
+  </asset>
+  <asset name="Cluster.enableClustering" displayName="Cluster:enableClustering">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venusACDL.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusACDL.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusACDL.code.classes.Checkpoint.activateCheckpointPackage.class" displayName="code/classes/Checkpoint/activateCheckpointPackage.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusACDL.code.classes.Cluster.class" displayName="code/classes/Cluster.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusACDL.code.classes.deployMobileGateway.util.class" displayName="code/classes/deployMobileGateway/util.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusACDL.code.classes.util.class" displayName="code/classes/util.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusACDL.code.classes.Utilities.class" displayName="code/classes/Utilities.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusACDL.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusACDL.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusACDL.code.source.Checkpoint.activateCheckpointPackage.java" displayName="code/source/Checkpoint/activateCheckpointPackage.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusACDL.code.source.Cluster.java" displayName="code/source/Cluster.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusACDL.code.source.deployMobileGateway.util.java" displayName="code/source/deployMobileGateway/util.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusACDL.code.source.util.java" displayName="code/source/util.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusACDL.code.source.Utilities.java" displayName="code/source/Utilities.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusACDL.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusACDL.config.listeners.cnf.backup" displayName="config/listeners.cnf.backup">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusACDL.config.urlalias.cnf" displayName="config/urlalias.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusACDL.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusACDL.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusACDL.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusACDL.repository" displayName="repository">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusACDL.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusACDL.sec" displayName="sec">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusACDL.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusACDL.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+

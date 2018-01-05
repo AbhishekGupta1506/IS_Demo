@@ -1,0 +1,1021 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="venusUtilities" runtimeVersion="9.0.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="9.0.0.0" />
+  <buildInfo name="BuildVersion" value="9.0.2" />
+  <buildInfo name="BuildTimestamp" value="2013-03-19T12:37:40" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.venusUtilities" displayName="venusUtilities">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="FileUtilities.compareZipFileContent" displayName="FileUtilities:compareZipFileContent">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.FileUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.FileUtilities.class</dependsOn>
+    <dependsOn>IS:FileUtilities.exists</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+    <dependsOn>IS:FileUtilities.zipEntries</dependsOn>
+    <dependsOn>IS:FileUtilities.bytesToFile</dependsOn>
+    <dependsOn>IS:FileUtilities.deleteFile</dependsOn>
+    <dependsOn>IS:FileUtilities.lastModified</dependsOn>
+    <dependsOn>IS:FileUtilities.replaceToken</dependsOn>
+    <dependsOn>IS:FileUtilities.getZipFileContentAsString</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.appendToFile</dependsOn>
+  </asset>
+  <asset name="FileUtilities.exists" displayName="FileUtilities:exists">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.FileUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.FileUtilities.class</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFileContent</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+    <dependsOn>IS:FileUtilities.zipEntries</dependsOn>
+    <dependsOn>IS:FileUtilities.bytesToFile</dependsOn>
+    <dependsOn>IS:FileUtilities.deleteFile</dependsOn>
+    <dependsOn>IS:FileUtilities.lastModified</dependsOn>
+    <dependsOn>IS:FileUtilities.replaceToken</dependsOn>
+    <dependsOn>IS:FileUtilities.getZipFileContentAsString</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.appendToFile</dependsOn>
+  </asset>
+  <asset name="FileUtilities.compareZipFiles" displayName="FileUtilities:compareZipFiles">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.FileUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.FileUtilities.class</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFileContent</dependsOn>
+    <dependsOn>IS:FileUtilities.exists</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+    <dependsOn>IS:FileUtilities.zipEntries</dependsOn>
+    <dependsOn>IS:FileUtilities.bytesToFile</dependsOn>
+    <dependsOn>IS:FileUtilities.deleteFile</dependsOn>
+    <dependsOn>IS:FileUtilities.lastModified</dependsOn>
+    <dependsOn>IS:FileUtilities.replaceToken</dependsOn>
+    <dependsOn>IS:FileUtilities.getZipFileContentAsString</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.appendToFile</dependsOn>
+  </asset>
+  <asset name="FileUtilities.copyFile" displayName="FileUtilities:copyFile">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.FileUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.FileUtilities.class</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFileContent</dependsOn>
+    <dependsOn>IS:FileUtilities.exists</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.zipEntries</dependsOn>
+    <dependsOn>IS:FileUtilities.bytesToFile</dependsOn>
+    <dependsOn>IS:FileUtilities.deleteFile</dependsOn>
+    <dependsOn>IS:FileUtilities.lastModified</dependsOn>
+    <dependsOn>IS:FileUtilities.replaceToken</dependsOn>
+    <dependsOn>IS:FileUtilities.getZipFileContentAsString</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.appendToFile</dependsOn>
+  </asset>
+  <asset name="FileUtilities.zipEntries" displayName="FileUtilities:zipEntries">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.FileUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.FileUtilities.class</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFileContent</dependsOn>
+    <dependsOn>IS:FileUtilities.exists</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+    <dependsOn>IS:FileUtilities.bytesToFile</dependsOn>
+    <dependsOn>IS:FileUtilities.deleteFile</dependsOn>
+    <dependsOn>IS:FileUtilities.lastModified</dependsOn>
+    <dependsOn>IS:FileUtilities.replaceToken</dependsOn>
+    <dependsOn>IS:FileUtilities.getZipFileContentAsString</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.appendToFile</dependsOn>
+  </asset>
+  <asset name="FileUtilities.bytesToFile" displayName="FileUtilities:bytesToFile">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.FileUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.FileUtilities.class</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFileContent</dependsOn>
+    <dependsOn>IS:FileUtilities.exists</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+    <dependsOn>IS:FileUtilities.zipEntries</dependsOn>
+    <dependsOn>IS:FileUtilities.deleteFile</dependsOn>
+    <dependsOn>IS:FileUtilities.lastModified</dependsOn>
+    <dependsOn>IS:FileUtilities.replaceToken</dependsOn>
+    <dependsOn>IS:FileUtilities.getZipFileContentAsString</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.appendToFile</dependsOn>
+  </asset>
+  <asset name="FileUtilities.deleteFile" displayName="FileUtilities:deleteFile">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.FileUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.FileUtilities.class</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFileContent</dependsOn>
+    <dependsOn>IS:FileUtilities.exists</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+    <dependsOn>IS:FileUtilities.zipEntries</dependsOn>
+    <dependsOn>IS:FileUtilities.bytesToFile</dependsOn>
+    <dependsOn>IS:FileUtilities.lastModified</dependsOn>
+    <dependsOn>IS:FileUtilities.replaceToken</dependsOn>
+    <dependsOn>IS:FileUtilities.getZipFileContentAsString</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.appendToFile</dependsOn>
+  </asset>
+  <asset name="FileUtilities.lastModified" displayName="FileUtilities:lastModified">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.FileUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.FileUtilities.class</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFileContent</dependsOn>
+    <dependsOn>IS:FileUtilities.exists</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+    <dependsOn>IS:FileUtilities.zipEntries</dependsOn>
+    <dependsOn>IS:FileUtilities.bytesToFile</dependsOn>
+    <dependsOn>IS:FileUtilities.deleteFile</dependsOn>
+    <dependsOn>IS:FileUtilities.replaceToken</dependsOn>
+    <dependsOn>IS:FileUtilities.getZipFileContentAsString</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.appendToFile</dependsOn>
+  </asset>
+  <asset name="FileUtilities.replaceToken" displayName="FileUtilities:replaceToken">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.FileUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.FileUtilities.class</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFileContent</dependsOn>
+    <dependsOn>IS:FileUtilities.exists</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+    <dependsOn>IS:FileUtilities.zipEntries</dependsOn>
+    <dependsOn>IS:FileUtilities.bytesToFile</dependsOn>
+    <dependsOn>IS:FileUtilities.deleteFile</dependsOn>
+    <dependsOn>IS:FileUtilities.lastModified</dependsOn>
+    <dependsOn>IS:FileUtilities.getZipFileContentAsString</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.appendToFile</dependsOn>
+  </asset>
+  <asset name="FileUtilities.getZipFileContentAsString" displayName="FileUtilities:getZipFileContentAsString">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.FileUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.FileUtilities.class</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFileContent</dependsOn>
+    <dependsOn>IS:FileUtilities.exists</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+    <dependsOn>IS:FileUtilities.zipEntries</dependsOn>
+    <dependsOn>IS:FileUtilities.bytesToFile</dependsOn>
+    <dependsOn>IS:FileUtilities.deleteFile</dependsOn>
+    <dependsOn>IS:FileUtilities.lastModified</dependsOn>
+    <dependsOn>IS:FileUtilities.replaceToken</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.appendToFile</dependsOn>
+  </asset>
+  <asset name="FileUtilities.listFiles" displayName="FileUtilities:listFiles">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.FileUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.FileUtilities.class</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFileContent</dependsOn>
+    <dependsOn>IS:FileUtilities.exists</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+    <dependsOn>IS:FileUtilities.zipEntries</dependsOn>
+    <dependsOn>IS:FileUtilities.bytesToFile</dependsOn>
+    <dependsOn>IS:FileUtilities.deleteFile</dependsOn>
+    <dependsOn>IS:FileUtilities.lastModified</dependsOn>
+    <dependsOn>IS:FileUtilities.replaceToken</dependsOn>
+    <dependsOn>IS:FileUtilities.getZipFileContentAsString</dependsOn>
+    <dependsOn>IS:FileUtilities.appendToFile</dependsOn>
+  </asset>
+  <asset name="FileUtilities.appendToFile" displayName="FileUtilities:appendToFile">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.FileUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.FileUtilities.class</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFileContent</dependsOn>
+    <dependsOn>IS:FileUtilities.exists</dependsOn>
+    <dependsOn>IS:FileUtilities.compareZipFiles</dependsOn>
+    <dependsOn>IS:FileUtilities.copyFile</dependsOn>
+    <dependsOn>IS:FileUtilities.zipEntries</dependsOn>
+    <dependsOn>IS:FileUtilities.bytesToFile</dependsOn>
+    <dependsOn>IS:FileUtilities.deleteFile</dependsOn>
+    <dependsOn>IS:FileUtilities.lastModified</dependsOn>
+    <dependsOn>IS:FileUtilities.replaceToken</dependsOn>
+    <dependsOn>IS:FileUtilities.getZipFileContentAsString</dependsOn>
+    <dependsOn>IS:FileUtilities.listFiles</dependsOn>
+  </asset>
+  <asset name="FileUtilities.zipContains" displayName="FileUtilities:zipContains">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:FileUtilities.zipEntries</dependsOn>
+    <dependsOn>IS:stringContains.genericStringContains</dependsOn>
+  </asset>
+  <asset name="Settings.JDBC.verify.verifyFunctionalAlias" displayName="Settings.JDBC.verify:verifyFunctionalAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.JDBC.verify.verifyPoolAlias" displayName="Settings.JDBC.verify:verifyPoolAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.JDBC.verify.verifyDriverAlias" displayName="Settings.JDBC.verify:verifyDriverAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.JDBC.updateFunctionalAlias" displayName="Settings.JDBC:updateFunctionalAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.JDBC.deletePoolAlias" displayName="Settings.JDBC:deletePoolAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.JDBC.addDriverAlias" displayName="Settings.JDBC:addDriverAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.JDBC.addPoolAlias" displayName="Settings.JDBC:addPoolAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.JDBC.deleteDriverAlias" displayName="Settings.JDBC:deleteDriverAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.Extended.setWattProperty" displayName="Settings.Extended:setWattProperty">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Settings.Extended.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Settings.Extended.class</dependsOn>
+    <dependsOn>IS:Settings.Extended.getWattProperty</dependsOn>
+  </asset>
+  <asset name="Settings.Extended.getWattProperty" displayName="Settings.Extended:getWattProperty">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Settings.Extended.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Settings.Extended.class</dependsOn>
+    <dependsOn>IS:Settings.Extended.setWattProperty</dependsOn>
+  </asset>
+  <asset name="Settings.Extended.getSystemAttributes" displayName="Settings.Extended:getSystemAttributes">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.Messaging.enableTrigger" displayName="Settings.Messaging:enableTrigger">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Settings.Messaging.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Settings.Messaging.class</dependsOn>
+    <dependsOn>IS:Settings.Messaging.getTryCount</dependsOn>
+    <dependsOn>IS:Settings.Messaging.getServerInfo</dependsOn>
+  </asset>
+  <asset name="Settings.Messaging.getBrokerSettings" displayName="Settings.Messaging:getBrokerSettings">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Settings.Messaging.getMonitorPort</dependsOn>
+  </asset>
+  <asset name="Settings.Messaging.getMonitorPort" displayName="Settings.Messaging:getMonitorPort">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.Messaging.setBrokerSettings" displayName="Settings.Messaging:setBrokerSettings">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:Settings.Messaging.setMonitorPort</dependsOn>
+  </asset>
+  <asset name="Settings.Messaging.syncDocsToBroker" displayName="Settings.Messaging:syncDocsToBroker">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.Messaging.setMonitorPort" displayName="Settings.Messaging:setMonitorPort">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.Messaging.restartIS" displayName="Settings.Messaging:restartIS">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.Messaging.getTryCount" displayName="Settings.Messaging:getTryCount">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Settings.Messaging.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Settings.Messaging.class</dependsOn>
+    <dependsOn>IS:Settings.Messaging.enableTrigger</dependsOn>
+    <dependsOn>IS:Settings.Messaging.getServerInfo</dependsOn>
+  </asset>
+  <asset name="Settings.Messaging.getServerInfo" displayName="Settings.Messaging:getServerInfo">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Settings.Messaging.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Settings.Messaging.class</dependsOn>
+    <dependsOn>IS:Settings.Messaging.enableTrigger</dependsOn>
+    <dependsOn>IS:Settings.Messaging.getTryCount</dependsOn>
+  </asset>
+  <asset name="Settings.Security.configureDecryptAliases" displayName="Settings.Security:configureDecryptAliases">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:WattProperty.setWattProperty</dependsOn>
+  </asset>
+  <asset name="Settings.Security.deleteClientCertificate" displayName="Settings.Security:deleteClientCertificate">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.Security.listImportedCertificates" displayName="Settings.Security:listImportedCertificates">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:util.stringListCompareAndSort</dependsOn>
+    <dependsOn>IS:Settings.Security.sortCertificatesList</dependsOn>
+  </asset>
+  <asset name="Settings.Security.configureTrustStoreAlias" displayName="Settings.Security:configureTrustStoreAlias">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:WattProperty.setWattProperty</dependsOn>
+  </asset>
+  <asset name="Settings.Security.configureSignAliases" displayName="Settings.Security:configureSignAliases">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:WattProperty.setWattProperty</dependsOn>
+  </asset>
+  <asset name="Settings.Security.configureClientCertificate" displayName="Settings.Security:configureClientCertificate">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="Settings.Security.sortCertificatesList" displayName="Settings.Security:sortCertificatesList">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Settings.Security.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Settings.Security.class</dependsOn>
+  </asset>
+  <asset name="Settings.Security.configureSSLAliases" displayName="Settings.Security:configureSSLAliases">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:WattProperty.setWattProperty</dependsOn>
+  </asset>
+  <asset name="Lists.init" displayName="Lists:init">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Lists.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Lists.class</dependsOn>
+    <dependsOn>IS:Lists.get</dependsOn>
+    <dependsOn>IS:Lists.add</dependsOn>
+  </asset>
+  <asset name="Lists.get" displayName="Lists:get">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Lists.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Lists.class</dependsOn>
+    <dependsOn>IS:Lists.init</dependsOn>
+    <dependsOn>IS:Lists.add</dependsOn>
+  </asset>
+  <asset name="Lists.add" displayName="Lists:add">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Lists.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Lists.class</dependsOn>
+    <dependsOn>IS:Lists.init</dependsOn>
+    <dependsOn>IS:Lists.get</dependsOn>
+  </asset>
+  <asset name="packageUtils.disablePkgs.disableUnwantedPkgs" displayName="packageUtils.disablePkgs:disableUnwantedPkgs">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="packageUtils.enablePkgs.EnblPkgsAndRestoreISDefaults" displayName="packageUtils.enablePkgs:EnblPkgsAndRestoreISDefaults">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="stringContains.stringContainsForLogs" displayName="stringContains:stringContainsForLogs">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:stringContains.genericStringContains</dependsOn>
+  </asset>
+  <asset name="stringContains.genericStringContains" displayName="stringContains:genericStringContains">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.stringContains.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.stringContains.class</dependsOn>
+  </asset>
+  <asset name="venus.srcVerification.Groups" displayName="venus.srcVerification:Groups">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.getJNDIAliasData" displayName="venus.srcVerification:getJNDIAliasData">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.JDBC" displayName="venus.srcVerification:JDBC">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.ExtendedSettings" displayName="venus.srcVerification:ExtendedSettings">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:StringUtilities.stringListCompareAndSort</dependsOn>
+  </asset>
+  <asset name="venus.srcVerification.Ports" displayName="venus.srcVerification:Ports">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.getJNDIAliases" displayName="venus.srcVerification:getJNDIAliases">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.ProxyInfo" displayName="venus.srcVerification:ProxyInfo">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:StringUtilities.stringListCompareAndSort</dependsOn>
+  </asset>
+  <asset name="venus.srcVerification.keystores" displayName="venus.srcVerification:keystores">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.Users" displayName="venus.srcVerification:Users">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.listAllConsumerEndpoints" displayName="venus.srcVerification:listAllConsumerEndpoints">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.listAllProviderEndpoints" displayName="venus.srcVerification:listAllProviderEndpoints">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.remoteServerAlias" displayName="venus.srcVerification:remoteServerAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.getPackages" displayName="venus.srcVerification:getPackages">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.getConnectionAliasReport" displayName="venus.srcVerification:getConnectionAliasReport">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.UsersGroupsACLs" displayName="venus.srcVerification:UsersGroupsACLs">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.Scheduler" displayName="venus.srcVerification:Scheduler">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.ACL" displayName="venus.srcVerification:ACL">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.proxyServerAlias" displayName="venus.srcVerification:proxyServerAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.getConnectionMetaDataReport" displayName="venus.srcVerification:getConnectionMetaDataReport">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.ISDefaultCerts" displayName="venus.srcVerification:ISDefaultCerts">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="venus.srcVerification.ISClientCert" displayName="venus.srcVerification:ISClientCert">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="StringUtilities.compareLists" displayName="StringUtilities:compareLists">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.StringUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.StringUtilities.class</dependsOn>
+    <dependsOn>IS:StringUtilities.stringListCompareAndSort</dependsOn>
+    <dependsOn>IS:StringUtilities.startsWith</dependsOn>
+    <dependsOn>IS:StringUtilities.contains</dependsOn>
+    <dependsOn>IS:StringUtilities.equal</dependsOn>
+  </asset>
+  <asset name="StringUtilities.stringListCompareAndSort" displayName="StringUtilities:stringListCompareAndSort">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.StringUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.StringUtilities.class</dependsOn>
+    <dependsOn>IS:StringUtilities.compareLists</dependsOn>
+    <dependsOn>IS:StringUtilities.startsWith</dependsOn>
+    <dependsOn>IS:StringUtilities.contains</dependsOn>
+    <dependsOn>IS:StringUtilities.equal</dependsOn>
+  </asset>
+  <asset name="StringUtilities.startsWith" displayName="StringUtilities:startsWith">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.StringUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.StringUtilities.class</dependsOn>
+    <dependsOn>IS:StringUtilities.compareLists</dependsOn>
+    <dependsOn>IS:StringUtilities.stringListCompareAndSort</dependsOn>
+    <dependsOn>IS:StringUtilities.contains</dependsOn>
+    <dependsOn>IS:StringUtilities.equal</dependsOn>
+  </asset>
+  <asset name="StringUtilities.contains" displayName="StringUtilities:contains">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.StringUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.StringUtilities.class</dependsOn>
+    <dependsOn>IS:StringUtilities.compareLists</dependsOn>
+    <dependsOn>IS:StringUtilities.stringListCompareAndSort</dependsOn>
+    <dependsOn>IS:StringUtilities.startsWith</dependsOn>
+    <dependsOn>IS:StringUtilities.equal</dependsOn>
+  </asset>
+  <asset name="StringUtilities.equal" displayName="StringUtilities:equal">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.StringUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.StringUtilities.class</dependsOn>
+    <dependsOn>IS:StringUtilities.compareLists</dependsOn>
+    <dependsOn>IS:StringUtilities.stringListCompareAndSort</dependsOn>
+    <dependsOn>IS:StringUtilities.startsWith</dependsOn>
+    <dependsOn>IS:StringUtilities.contains</dependsOn>
+  </asset>
+  <asset name="utils.add_Prov_http_endPt" displayName="utils:add_Prov_http_endPt">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.deleteJMSProviderEndpoint" displayName="utils:deleteJMSProviderEndpoint">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.enableTextMessage" displayName="utils:enableTextMessage">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.restoreTriggerAndGetURI" displayName="utils:restoreTriggerAndGetURI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.constructWSDLURLAndGetURI</dependsOn>
+    <dependsOn>IS:utils.enableJMSTrigger</dependsOn>
+    <dependsOn>IS:utils.disableJMSTrigger</dependsOn>
+    <dependsOn>IS:utils.disableConnectionAlias</dependsOn>
+    <dependsOn>IS:utils.enableConnectionAlias</dependsOn>
+  </asset>
+  <asset name="utils.updateTriggerAndGetURI" displayName="utils:updateTriggerAndGetURI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.enableJMSTrigger</dependsOn>
+    <dependsOn>IS:utils.disableJMSTrigger</dependsOn>
+    <dependsOn>IS:utils.disableConnectionAlias</dependsOn>
+    <dependsOn>IS:utils.enableConnectionAlias</dependsOn>
+    <dependsOn>IS:utils.constructWSDLURLAndGetURI</dependsOn>
+  </asset>
+  <asset name="utils.addJMSWSC" displayName="utils:addJMSWSC">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.addJMSConsumerEndpoint" displayName="utils:addJMSConsumerEndpoint">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.disableJMSTrigger" displayName="utils:disableJMSTrigger">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.registerAliasWithWSD" displayName="utils:registerAliasWithWSD">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.utils.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.utils.class</dependsOn>
+  </asset>
+  <asset name="utils.constructWSDLURLAndGetURI" displayName="utils:constructWSDLURLAndGetURI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.getURI</dependsOn>
+  </asset>
+  <asset name="utils.updateJMSProviderEndpoint" displayName="utils:updateJMSProviderEndpoint">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.addJMSProviderEndpoint</dependsOn>
+  </asset>
+  <asset name="utils.changeAliasAndRefreshConnectors" displayName="utils:changeAliasAndRefreshConnectors">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.registerAliasWithWSD</dependsOn>
+  </asset>
+  <asset name="utils.invokeConnectorAndWait" displayName="utils:invokeConnectorAndWait">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.restoreWSDAndGetURI" displayName="utils:restoreWSDAndGetURI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.constructWSDLURLAndGetURI</dependsOn>
+  </asset>
+  <asset name="utils.updateJNDIAndGetURI" displayName="utils:updateJNDIAndGetURI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.constructWSDLURLAndGetURI</dependsOn>
+  </asset>
+  <asset name="utils.restoreWSEAndGetURI" displayName="utils:restoreWSEAndGetURI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.updateWSEAndGetURI</dependsOn>
+  </asset>
+  <asset name="utils.addJMSProviderEndpoint" displayName="utils:addJMSProviderEndpoint">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.enableJMSTrigger" displayName="utils:enableJMSTrigger">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.deleteWSDs" displayName="utils:deleteWSDs">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.addWSDAndGetURI" displayName="utils:addWSDAndGetURI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.constructWSDLURLAndGetURI</dependsOn>
+  </asset>
+  <asset name="utils.getURI" displayName="utils:getURI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.getWSDLFromURL</dependsOn>
+  </asset>
+  <asset name="utils.getWSDLFromURL" displayName="utils:getWSDLFromURL">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.restoreJNDIAndGetURI" displayName="utils:restoreJNDIAndGetURI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.constructWSDLURLAndGetURI</dependsOn>
+  </asset>
+  <asset name="utils.disableConnectionAlias" displayName="utils:disableConnectionAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.deleteConsumerEndpoint" displayName="utils:deleteConsumerEndpoint">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.enableConnectionAlias" displayName="utils:enableConnectionAlias">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.disableTextMessage" displayName="utils:disableTextMessage">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.updateWSDAndGetURI" displayName="utils:updateWSDAndGetURI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.constructWSDLURLAndGetURI</dependsOn>
+  </asset>
+  <asset name="utils.delhttp_prov_endPt" displayName="utils:delhttp_prov_endPt">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.add_Cons_http_endPt" displayName="utils:add_Cons_http_endPt">
+    <implementation.generic type="isflowservice" />
+  </asset>
+  <asset name="utils.updateWSEAndGetURI" displayName="utils:updateWSEAndGetURI">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:utils.constructWSDLURLAndGetURI</dependsOn>
+    <dependsOn>IS:utils.updateJMSProviderEndpoint</dependsOn>
+  </asset>
+  <asset name="proputil.removeProperties" displayName="proputil:removeProperties">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.proputil.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.proputil.class</dependsOn>
+    <dependsOn>IS:proputil.removeProperty</dependsOn>
+    <dependsOn>IS:proputil.setProperty</dependsOn>
+    <dependsOn>IS:proputil.waitUntilPropertyRemoved</dependsOn>
+    <dependsOn>IS:proputil.getProperty</dependsOn>
+  </asset>
+  <asset name="proputil.removeProperty" displayName="proputil:removeProperty">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.proputil.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.proputil.class</dependsOn>
+    <dependsOn>IS:proputil.removeProperties</dependsOn>
+    <dependsOn>IS:proputil.setProperty</dependsOn>
+    <dependsOn>IS:proputil.waitUntilPropertyRemoved</dependsOn>
+    <dependsOn>IS:proputil.getProperty</dependsOn>
+  </asset>
+  <asset name="proputil.setProperty" displayName="proputil:setProperty">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.proputil.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.proputil.class</dependsOn>
+    <dependsOn>IS:proputil.removeProperties</dependsOn>
+    <dependsOn>IS:proputil.removeProperty</dependsOn>
+    <dependsOn>IS:proputil.waitUntilPropertyRemoved</dependsOn>
+    <dependsOn>IS:proputil.getProperty</dependsOn>
+  </asset>
+  <asset name="proputil.waitUntilPropertyRemoved" displayName="proputil:waitUntilPropertyRemoved">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.proputil.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.proputil.class</dependsOn>
+    <dependsOn>IS:proputil.removeProperties</dependsOn>
+    <dependsOn>IS:proputil.removeProperty</dependsOn>
+    <dependsOn>IS:proputil.setProperty</dependsOn>
+    <dependsOn>IS:proputil.getProperty</dependsOn>
+  </asset>
+  <asset name="proputil.getProperty" displayName="proputil:getProperty">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.proputil.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.proputil.class</dependsOn>
+    <dependsOn>IS:proputil.removeProperties</dependsOn>
+    <dependsOn>IS:proputil.removeProperty</dependsOn>
+    <dependsOn>IS:proputil.setProperty</dependsOn>
+    <dependsOn>IS:proputil.waitUntilPropertyRemoved</dependsOn>
+  </asset>
+  <asset name="ThreadUtilities.sleep" displayName="ThreadUtilities:sleep">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.ThreadUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.ThreadUtilities.class</dependsOn>
+    <dependsOn>IS:ThreadUtilities.exec</dependsOn>
+  </asset>
+  <asset name="ThreadUtilities.exec" displayName="ThreadUtilities:exec">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.ThreadUtilities.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.ThreadUtilities.class</dependsOn>
+    <dependsOn>IS:ThreadUtilities.sleep</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.createBroker" displayName="BrokerConfig:createBroker">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.BrokerConfig.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.BrokerConfig.class</dependsOn>
+    <dependsOn>IS:BrokerConfig.setSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.configureBasicAuth</dependsOn>
+    <dependsOn>IS:BrokerConfig.getSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_start</dependsOn>
+    <dependsOn>IS:BrokerConfig.deleteBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.getClientInfo</dependsOn>
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_status</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_stop</dependsOn>
+    <dependsOn>IS:BrokerConfig.createTerritory</dependsOn>
+    <dependsOn>IS:BrokerConfig.getFilterInfo</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.setupBasicAuth" displayName="BrokerConfig:setupBasicAuth">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:BrokerConfig.configureBasicAuth</dependsOn>
+    <dependsOn>IS:BrokerConfig.shutdownBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.restartBroker</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.setSSLConfig" displayName="BrokerConfig:setSSLConfig">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.BrokerConfig.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.BrokerConfig.class</dependsOn>
+    <dependsOn>IS:BrokerConfig.createBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.configureBasicAuth</dependsOn>
+    <dependsOn>IS:BrokerConfig.getSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_start</dependsOn>
+    <dependsOn>IS:BrokerConfig.deleteBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.getClientInfo</dependsOn>
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_status</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_stop</dependsOn>
+    <dependsOn>IS:BrokerConfig.createTerritory</dependsOn>
+    <dependsOn>IS:BrokerConfig.getFilterInfo</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.configureBasicAuth" displayName="BrokerConfig:configureBasicAuth">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.BrokerConfig.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.BrokerConfig.class</dependsOn>
+    <dependsOn>IS:BrokerConfig.createBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.setSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.getSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_start</dependsOn>
+    <dependsOn>IS:BrokerConfig.deleteBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.getClientInfo</dependsOn>
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_status</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_stop</dependsOn>
+    <dependsOn>IS:BrokerConfig.createTerritory</dependsOn>
+    <dependsOn>IS:BrokerConfig.getFilterInfo</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.getSSLConfig" displayName="BrokerConfig:getSSLConfig">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.BrokerConfig.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.BrokerConfig.class</dependsOn>
+    <dependsOn>IS:BrokerConfig.createBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.setSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.configureBasicAuth</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_start</dependsOn>
+    <dependsOn>IS:BrokerConfig.deleteBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.getClientInfo</dependsOn>
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_status</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_stop</dependsOn>
+    <dependsOn>IS:BrokerConfig.createTerritory</dependsOn>
+    <dependsOn>IS:BrokerConfig.getFilterInfo</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.broker_start" displayName="BrokerConfig:broker_start">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.BrokerConfig.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.BrokerConfig.class</dependsOn>
+    <dependsOn>IS:BrokerConfig.createBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.setSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.configureBasicAuth</dependsOn>
+    <dependsOn>IS:BrokerConfig.getSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.deleteBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.getClientInfo</dependsOn>
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_status</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_stop</dependsOn>
+    <dependsOn>IS:BrokerConfig.createTerritory</dependsOn>
+    <dependsOn>IS:BrokerConfig.getFilterInfo</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.deleteBroker" displayName="BrokerConfig:deleteBroker">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.BrokerConfig.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.BrokerConfig.class</dependsOn>
+    <dependsOn>IS:BrokerConfig.createBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.setSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.configureBasicAuth</dependsOn>
+    <dependsOn>IS:BrokerConfig.getSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_start</dependsOn>
+    <dependsOn>IS:BrokerConfig.getClientInfo</dependsOn>
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_status</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_stop</dependsOn>
+    <dependsOn>IS:BrokerConfig.createTerritory</dependsOn>
+    <dependsOn>IS:BrokerConfig.getFilterInfo</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.shutdownBroker" displayName="BrokerConfig:shutdownBroker">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:BrokerConfig.broker_stop</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.restartBroker" displayName="BrokerConfig:restartBroker">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:BrokerConfig.broker_start</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.getClientInfo" displayName="BrokerConfig:getClientInfo">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.BrokerConfig.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.BrokerConfig.class</dependsOn>
+    <dependsOn>IS:BrokerConfig.createBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.setSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.configureBasicAuth</dependsOn>
+    <dependsOn>IS:BrokerConfig.getSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_start</dependsOn>
+    <dependsOn>IS:BrokerConfig.deleteBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_status</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_stop</dependsOn>
+    <dependsOn>IS:BrokerConfig.createTerritory</dependsOn>
+    <dependsOn>IS:BrokerConfig.getFilterInfo</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.getEventTypeDefinition" displayName="BrokerConfig:getEventTypeDefinition">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.BrokerConfig.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.BrokerConfig.class</dependsOn>
+    <dependsOn>IS:BrokerConfig.createBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.setSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.configureBasicAuth</dependsOn>
+    <dependsOn>IS:BrokerConfig.getSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_start</dependsOn>
+    <dependsOn>IS:BrokerConfig.deleteBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.getClientInfo</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_status</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_stop</dependsOn>
+    <dependsOn>IS:BrokerConfig.createTerritory</dependsOn>
+    <dependsOn>IS:BrokerConfig.getFilterInfo</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.broker_status" displayName="BrokerConfig:broker_status">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.BrokerConfig.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.BrokerConfig.class</dependsOn>
+    <dependsOn>IS:BrokerConfig.createBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.setSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.configureBasicAuth</dependsOn>
+    <dependsOn>IS:BrokerConfig.getSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_start</dependsOn>
+    <dependsOn>IS:BrokerConfig.deleteBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.getClientInfo</dependsOn>
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_stop</dependsOn>
+    <dependsOn>IS:BrokerConfig.createTerritory</dependsOn>
+    <dependsOn>IS:BrokerConfig.getFilterInfo</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.broker_stop" displayName="BrokerConfig:broker_stop">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.BrokerConfig.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.BrokerConfig.class</dependsOn>
+    <dependsOn>IS:BrokerConfig.createBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.setSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.configureBasicAuth</dependsOn>
+    <dependsOn>IS:BrokerConfig.getSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_start</dependsOn>
+    <dependsOn>IS:BrokerConfig.deleteBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.getClientInfo</dependsOn>
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_status</dependsOn>
+    <dependsOn>IS:BrokerConfig.createTerritory</dependsOn>
+    <dependsOn>IS:BrokerConfig.getFilterInfo</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.createTerritory" displayName="BrokerConfig:createTerritory">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.BrokerConfig.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.BrokerConfig.class</dependsOn>
+    <dependsOn>IS:BrokerConfig.createBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.setSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.configureBasicAuth</dependsOn>
+    <dependsOn>IS:BrokerConfig.getSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_start</dependsOn>
+    <dependsOn>IS:BrokerConfig.deleteBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.getClientInfo</dependsOn>
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_status</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_stop</dependsOn>
+    <dependsOn>IS:BrokerConfig.getFilterInfo</dependsOn>
+  </asset>
+  <asset name="BrokerConfig.getFilterInfo" displayName="BrokerConfig:getFilterInfo">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.BrokerConfig.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.BrokerConfig.class</dependsOn>
+    <dependsOn>IS:BrokerConfig.createBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.setSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.configureBasicAuth</dependsOn>
+    <dependsOn>IS:BrokerConfig.getSSLConfig</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_start</dependsOn>
+    <dependsOn>IS:BrokerConfig.deleteBroker</dependsOn>
+    <dependsOn>IS:BrokerConfig.getClientInfo</dependsOn>
+    <dependsOn>IS:BrokerConfig.getEventTypeDefinition</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_status</dependsOn>
+    <dependsOn>IS:BrokerConfig.broker_stop</dependsOn>
+    <dependsOn>IS:BrokerConfig.createTerritory</dependsOn>
+  </asset>
+  <asset name="WattProperty.setWattProperty" displayName="WattProperty:setWattProperty">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.WattProperty.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.WattProperty.class</dependsOn>
+  </asset>
+  <asset name="Counters.getNotificationCounter" displayName="Counters:getNotificationCounter">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Counters.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Counters.class</dependsOn>
+    <dependsOn>IS:Counters.getRetryCount</dependsOn>
+    <dependsOn>IS:Counters.putRetryCount</dependsOn>
+    <dependsOn>IS:Counters.initializeNotificationCounter</dependsOn>
+    <dependsOn>IS:Counters.incrementNotificationCounter</dependsOn>
+  </asset>
+  <asset name="Counters.getRetryCount" displayName="Counters:getRetryCount">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Counters.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Counters.class</dependsOn>
+    <dependsOn>IS:Counters.getNotificationCounter</dependsOn>
+    <dependsOn>IS:Counters.putRetryCount</dependsOn>
+    <dependsOn>IS:Counters.initializeNotificationCounter</dependsOn>
+    <dependsOn>IS:Counters.incrementNotificationCounter</dependsOn>
+  </asset>
+  <asset name="Counters.putRetryCount" displayName="Counters:putRetryCount">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Counters.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Counters.class</dependsOn>
+    <dependsOn>IS:Counters.getNotificationCounter</dependsOn>
+    <dependsOn>IS:Counters.getRetryCount</dependsOn>
+    <dependsOn>IS:Counters.initializeNotificationCounter</dependsOn>
+    <dependsOn>IS:Counters.incrementNotificationCounter</dependsOn>
+  </asset>
+  <asset name="Counters.initializeNotificationCounter" displayName="Counters:initializeNotificationCounter">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Counters.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Counters.class</dependsOn>
+    <dependsOn>IS:Counters.getNotificationCounter</dependsOn>
+    <dependsOn>IS:Counters.getRetryCount</dependsOn>
+    <dependsOn>IS:Counters.putRetryCount</dependsOn>
+    <dependsOn>IS:Counters.incrementNotificationCounter</dependsOn>
+  </asset>
+  <asset name="Counters.incrementNotificationCounter" displayName="Counters:incrementNotificationCounter">
+    <implementation.generic type="isjavaservice" />
+    <dependsOn>IS:venusUtilities.code.source.Counters.java</dependsOn>
+    <dependsOn>IS:venusUtilities.code.classes.Counters.class</dependsOn>
+    <dependsOn>IS:Counters.getNotificationCounter</dependsOn>
+    <dependsOn>IS:Counters.getRetryCount</dependsOn>
+    <dependsOn>IS:Counters.putRetryCount</dependsOn>
+    <dependsOn>IS:Counters.initializeNotificationCounter</dependsOn>
+  </asset>
+  <asset name="venusUtilities.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusUtilities.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusUtilities.code.classes.BrokerConfig.class" displayName="code/classes/BrokerConfig.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.classes.Counters.class" displayName="code/classes/Counters.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.classes.FileUtilities.class" displayName="code/classes/FileUtilities.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.classes.Lists.class" displayName="code/classes/Lists.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.classes.proputil.class" displayName="code/classes/proputil.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.classes.Settings.Extended.class" displayName="code/classes/Settings/Extended.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.classes.Settings.Messaging.class" displayName="code/classes/Settings/Messaging.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.classes.Settings.Security.class" displayName="code/classes/Settings/Security.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.classes.stringContains.class" displayName="code/classes/stringContains.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.classes.StringUtilities.class" displayName="code/classes/StringUtilities.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.classes.ThreadUtilities.class" displayName="code/classes/ThreadUtilities.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.classes.utils.class" displayName="code/classes/utils.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.classes.WattProperty.class" displayName="code/classes/WattProperty.class">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusUtilities.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusUtilities.code.source.BrokerConfig.java" displayName="code/source/BrokerConfig.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.source.Counters.java" displayName="code/source/Counters.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.source.FileUtilities.java" displayName="code/source/FileUtilities.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.source.Lists.java" displayName="code/source/Lists.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.source.proputil.java" displayName="code/source/proputil.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.source.Settings.Extended.java" displayName="code/source/Settings/Extended.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.source.Settings.Messaging.java" displayName="code/source/Settings/Messaging.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.source.Settings.Security.java" displayName="code/source/Settings/Security.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.source.stringContains.java" displayName="code/source/stringContains.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.source.StringUtilities.java" displayName="code/source/StringUtilities.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.source.ThreadUtilities.java" displayName="code/source/ThreadUtilities.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.source.utils.java" displayName="code/source/utils.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.code.source.WattProperty.java" displayName="code/source/WattProperty.java">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="venusUtilities.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusUtilities.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusUtilities.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusUtilities.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusUtilities.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusUtilities.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="venusUtilities.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+
